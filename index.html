@@ -1,0 +1,3433 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAM Ô DISCOVERY – Gotec Land</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --crimson: #7B1225;
+      --crimson-dark: #5A0D1C;
+      --crimson-light: #9E1A30;
+      --gold: #C5A55A;
+      --gold-light: #DEC07A;
+      --cream: #FAF7F2;
+      --off-white: #F4F0E8;
+      --charcoal: #1C1C1C;
+      --text-muted: #5A5550;
+      --border-light: rgba(197, 165, 90, 0.25);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4rem;
+      height: 72px;
+      background: var(--crimson-dark);
+      border-bottom: 1px solid rgba(197, 165, 90, 0.3);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .nav-cta {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, #A88644 100%);
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(197, 165, 90, 0.2);
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .nav-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-25deg);
+      transition: none;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(197, 165, 90, 0.35);
+      border-color: rgba(255, 255, 255, 0.3);
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 30%, #b2934c 100%);
+      letter-spacing: 2.3px;
+    }
+
+    .nav-cta:hover::before {
+      left: 150%;
+      transition: all 0.8s ease-in-out;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, #0a1628 0%, #1B3050 40%, #2C5062 70%, #3A6B72 100%);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: url('https://gotecland.vn/image/ZlE3EMpPzaAv10i7RYSpz5rq9tDY5Lg4EDKLDE0q2Bw/file/media/uploads/2026/03/10k_NAMO_DISCOVERY_SeaViewCloseup_rz.jpg') center/cover no-repeat;
+      transform-origin: center;
+      animation: kenBurns 20s cubic-bezier(0.25, 1, 0.3, 1) infinite alternate;
+    }
+
+    @keyframes kenBurns {
+      0% { transform: scale(1.04); }
+      100% { transform: scale(1.0); }
+    }
+
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: 
+        linear-gradient(to top, rgba(10, 5, 3, 0.95) 0%, rgba(10, 5, 3, 0.4) 50%, rgba(10, 5, 3, 0.05) 100%),
+        radial-gradient(circle at 20% 80%, rgba(10, 5, 3, 0.88) 0%, transparent 65%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 4rem 6rem;
+      max-width: 900px;
+    }
+
+    .hero-label {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: heroFadeUp 1s 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .hero-label::before {
+      content: '';
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      animation: lineExpand 1s 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: heroFadeUp 1.2s 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .hero-title em {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.75;
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+      opacity: 0;
+      transform: translateY(35px);
+      animation: heroFadeUp 1.4s 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--crimson-light) 0%, var(--crimson) 50%, var(--crimson-dark) 100%);
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      box-shadow: 0 4px 15px rgba(123, 18, 37, 0.15);
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-25deg);
+      transition: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(123, 18, 37, 0.3);
+      border-color: rgba(255, 255, 255, 0.2);
+      background: linear-gradient(135deg, var(--crimson-light) 0%, var(--crimson) 30%, #5e0d1b 100%);
+      letter-spacing: 2.3px;
+    }
+
+    .btn-primary:hover::before {
+      left: 150%;
+      transition: all 0.8s ease-in-out;
+    }
+
+    .btn-outline {
+      position: relative;
+      overflow: hidden;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .btn-outline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-25deg);
+      transition: none;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--gold-light);
+      color: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(197, 165, 90, 0.15);
+      letter-spacing: 2.3px;
+    }
+
+    .btn-outline:hover::before {
+      left: 150%;
+      transition: all 0.8s ease-in-out;
+    }
+
+    .btn-gold {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, #A88644 100%);
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(197, 165, 90, 0.2);
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .btn-gold::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-25deg);
+      transition: none;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(197, 165, 90, 0.35);
+      border-color: rgba(255, 255, 255, 0.3);
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 30%, #b2934c 100%);
+      letter-spacing: 2.3px;
+    }
+
+    .btn-gold:hover::before {
+      left: 150%;
+      transition: all 0.8s ease-in-out;
+    }
+
+    @keyframes heroFadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes lineExpand {
+      to {
+        width: 40px;
+      }
+    }
+
+    .hero-scroll {
+      position: absolute;
+      right: 4rem;
+      bottom: 5rem;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-scroll span {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      writing-mode: vertical-rl;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(to bottom, rgba(197, 165, 90, 0.6), transparent);
+      animation: scrollDrop 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollDrop {
+
+      0%,
+      100% {
+        opacity: 0.3;
+        transform: scaleY(0.6) translateY(-10px);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scaleY(1) translateY(0);
+      }
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      background: linear-gradient(135deg, var(--crimson-dark) 0%, #4a0713 100%);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(197, 165, 90, 0.3);
+      border-bottom: 1px solid rgba(197, 165, 90, 0.3);
+      overflow: hidden;
+    }
+
+    .stat-item {
+      padding: 3rem 2rem;
+      border-right: 1px solid rgba(197, 165, 90, 0.2);
+      text-align: center;
+      position: relative;
+      background: transparent;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 
+        opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        background-color 0.4s ease;
+      cursor: default;
+    }
+
+    .stat-item:last-child {
+      border-right: none;
+    }
+
+    /* Staggered entrance animation when stats-bar is visible */
+    .stats-bar.visible .stat-item {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .stats-bar.visible .stat-item:nth-child(1) { transition-delay: 0.1s; }
+    .stats-bar.visible .stat-item:nth-child(2) { transition-delay: 0.2s; }
+    .stats-bar.visible .stat-item:nth-child(3) { transition-delay: 0.3s; }
+    .stats-bar.visible .stat-item:nth-child(4) { transition-delay: 0.4s; }
+
+    /* Hover effect */
+    .stat-item:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .stat-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    .stat-item:hover::after {
+      transform: scaleX(1);
+    }
+
+    .stat-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 0.8rem;
+      transition: color 0.3s ease;
+    }
+    .stat-item:hover .stat-label {
+      color: #fff;
+    }
+
+    .stat-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      line-height: 1;
+      transition: transform 0.3s ease, color 0.3s ease;
+      display: inline-block;
+    }
+    .stat-item:hover .stat-value {
+      transform: scale(1.05);
+      color: #fff;
+      text-shadow: 0 0 15px rgba(222, 192, 122, 0.6);
+    }
+
+    /* SECTION SHARED */
+    section {
+      padding: 7rem 4rem;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--crimson);
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 30px;
+      height: 1px;
+      background: var(--crimson);
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--charcoal);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--cream);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      font-weight: 300;
+    }
+
+    .about-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      position: relative;
+    }
+
+    .about-img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-img.tall {
+      grid-row: span 2;
+      aspect-ratio: unset;
+    }
+
+    .about-images::after {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 60%;
+      height: 60%;
+      border: 1px solid var(--gold);
+      z-index: -1;
+    }
+
+    /* AMENITIES */
+    .amenities {
+      background: var(--off-white);
+      padding: 7rem 4rem;
+      overflow: hidden;
+    }
+
+    .amenities-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 4.5rem;
+    }
+
+    .amenities-header .section-label {
+      justify-content: center;
+    }
+
+    .amenities-header .section-label::before {
+      display: none;
+    }
+
+    .amenity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .amenity-card {
+      background: #fff;
+      padding: 3rem 2rem;
+      border-radius: 16px;
+      border: 1px solid rgba(197, 165, 90, 0.15);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 
+        opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+        transform 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+    }
+
+    /* Staggered sequential entrance animation */
+    .amenities.visible .amenity-card {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .amenities.visible .amenity-card:nth-child(1) { transition-delay: 0.1s; }
+    .amenities.visible .amenity-card:nth-child(2) { transition-delay: 0.2s; }
+    .amenities.visible .amenity-card:nth-child(3) { transition-delay: 0.3s; }
+    .amenities.visible .amenity-card:nth-child(4) { transition-delay: 0.4s; }
+    .amenities.visible .amenity-card:nth-child(5) { transition-delay: 0.5s; }
+    .amenities.visible .amenity-card:nth-child(6) { transition-delay: 0.6s; }
+
+    /* Elegant hover lift & glow */
+    .amenity-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: 0 20px 40px rgba(123, 18, 37, 0.06);
+    }
+
+    /* Gold line expanding at bottom of card */
+    .amenity-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to right, var(--crimson), var(--gold));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .amenity-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* Icon Container & Shapes */
+    .amenity-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 12px;
+      background: rgba(123, 18, 37, 0.05);
+      color: var(--crimson);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: all 0.4s ease;
+    }
+
+    .amenity-card:hover .amenity-icon {
+      background: var(--crimson);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .amenity-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+
+    .amenity-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* Custom CSS motions for specific vector icons */
+    .amenity-card:hover .icon-pool path {
+      animation: waveMotion 1.5s infinite ease-in-out;
+    }
+    .amenity-card:hover .icon-gym path {
+      transform-origin: center;
+      animation: gymLift 0.8s infinite alternate ease-in-out;
+    }
+    .amenity-card:hover .icon-park path {
+      transform-origin: bottom center;
+      animation: treeTilt 1.2s infinite alternate ease-in-out;
+    }
+    .amenity-card:hover .icon-market path {
+      animation: cartRoll 1s infinite ease-in-out;
+    }
+    .amenity-card:hover .icon-child path {
+      animation: childScale 1.5s infinite ease-in-out;
+    }
+    .amenity-card:hover .icon-community path {
+      transform-origin: center;
+      animation: communityScale 1.5s infinite alternate ease-in-out;
+    }
+
+    @keyframes waveMotion {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(2px) translateX(1px); }
+    }
+    @keyframes gymLift {
+      0% { transform: translateY(0) scaleY(1); }
+      100% { transform: translateY(-4px) scaleY(1.05); }
+    }
+    @keyframes treeTilt {
+      0% { transform: rotate(-3deg); }
+      100% { transform: rotate(3deg); }
+    }
+    @keyframes cartRoll {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(3px) rotate(3deg); }
+    }
+    @keyframes childScale {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+    @keyframes communityScale {
+      0% { transform: scale(0.95); }
+      100% { transform: scale(1.05); }
+    }
+
+    /* GALLERY */
+    .gallery {
+      background: var(--charcoal);
+      padding: 7rem 0;
+    }
+
+    .gallery-header {
+      padding: 0 4rem;
+      margin-bottom: 3rem;
+    }
+
+    .gallery-header .section-title {
+      color: #fff;
+    }
+
+    .gallery-header .section-label {
+      color: var(--gold-light);
+    }
+
+    .gallery-header .section-label::before {
+      background: var(--gold);
+    }
+
+    .gallery-strip {
+      display: flex;
+      gap: 3px;
+      overflow-x: auto;
+      padding: 0 4rem;
+      scrollbar-width: none;
+    }
+
+    .gallery-strip::-webkit-scrollbar {
+      display: none;
+    }
+
+    .gallery-item {
+      flex: 0 0 auto;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      height: 420px;
+      width: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery-item:hover .gallery-item-overlay {
+      opacity: 1;
+    }
+
+    /* LEGAL */
+    /* LEGAL */
+    .legal {
+      background: var(--cream);
+      padding: 7rem 4rem;
+    }
+
+    .legal-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .legal-docs {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .legal-docs li {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 1.1rem 1.5rem;
+      border: 1px solid rgba(197, 165, 90, 0.15);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.45);
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    /* Staggered entrance animation when legal section is visible */
+    .legal.visible .legal-docs li {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .legal-docs li:nth-child(1) { transition-delay: 0.1s; }
+    .legal-docs li:nth-child(2) { transition-delay: 0.2s; }
+    .legal-docs li:nth-child(3) { transition-delay: 0.3s; }
+    .legal-docs li:nth-child(4) { transition-delay: 0.4s; }
+    .legal-docs li:nth-child(5) { transition-delay: 0.5s; }
+    .legal-docs li:nth-child(6) { transition-delay: 0.6s; }
+
+    .legal-docs li:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(123, 18, 37, 0.04);
+      border-color: rgba(123, 18, 37, 0.3);
+    }
+
+    .doc-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      flex-shrink: 0;
+      background: rgba(123, 18, 37, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--crimson);
+      transition: all 0.4s ease;
+    }
+
+    .legal-docs li:hover .doc-icon {
+      background: var(--crimson);
+      color: #fff;
+      transform: scale(1.08) rotate(5deg);
+    }
+
+    .doc-name {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--charcoal);
+      flex: 1;
+      transition: color 0.3s ease;
+    }
+
+    .legal-docs li:hover .doc-name {
+      color: var(--crimson-dark);
+    }
+
+    .doc-link {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--crimson);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(123, 18, 37, 0.04);
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(123, 18, 37, 0.1);
+    }
+
+    .doc-link::after {
+      content: '→';
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .legal-docs li:hover .doc-link {
+      background: var(--crimson-dark);
+      color: #fff;
+      border-color: var(--crimson-dark);
+    }
+
+    .legal-docs li:hover .doc-link::after {
+      transform: translateX(3px);
+    }
+
+    .legal-highlight {
+      background: linear-gradient(135deg, var(--crimson-dark) 0%, #3a0812 100%);
+      padding: 4rem 3.5rem;
+      color: #fff;
+      border-radius: 16px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(90, 13, 28, 0.15);
+      border: 1px solid rgba(197, 165, 90, 0.25);
+    }
+
+    .legal-highlight::before {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      width: 180px;
+      height: 180px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C5A55A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/%3E%3Cpath d='m9 11 2 2 4-4'/%3E%3C/svg%3E") no-repeat center/contain;
+      opacity: 0.08;
+      pointer-events: none;
+      transition: transform 1s ease;
+    }
+
+    .legal-highlight:hover::before {
+      transform: rotate(15deg) scale(1.1);
+    }
+
+    .legal-highlight h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.1rem;
+      font-weight: 400;
+      margin-bottom: 1.2rem;
+      color: var(--gold-light);
+      letter-spacing: 0.5px;
+    }
+
+    .legal-highlight p {
+      font-size: 14.5px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    @media (max-width: 600px) {
+      .legal-highlight {
+        padding: 3rem 2rem;
+      }
+    }
+
+    /* LOCATION */
+    .location-section {
+      background: var(--off-white);
+      padding: 7rem 4rem;
+    }
+
+    .location-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .location-map-wrap {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border-light);
+      background: #fafafa;
+      transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .location-map-wrap:hover {
+      box-shadow: 0 25px 50px rgba(123, 18, 37, 0.08);
+      border-color: rgba(123, 18, 37, 0.25);
+    }
+
+    .location-map {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(80%) contrast(1.02);
+      transition: filter 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .location-map-wrap:hover .location-map {
+      filter: grayscale(0%) contrast(1.05);
+    }
+
+    .location-points {
+      list-style: none;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .location-points li {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 1.1rem 1.5rem;
+      border: 1px solid rgba(197, 165, 90, 0.12);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.35);
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+    }
+
+    /* Staggered entrance animation when location section is visible */
+    .location-section.visible .location-points li {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .location-section.visible .location-points li:nth-child(1) { transition-delay: 0.1s; }
+    .location-section.visible .location-points li:nth-child(2) { transition-delay: 0.2s; }
+    .location-section.visible .location-points li:nth-child(3) { transition-delay: 0.3s; }
+    .location-section.visible .location-points li:nth-child(4) { transition-delay: 0.4s; }
+    .location-section.visible .location-points li:nth-child(5) { transition-delay: 0.5s; }
+
+    .location-points li:hover {
+      background: #fff;
+      border-color: rgba(123, 18, 37, 0.3);
+      box-shadow: 0 10px 22px rgba(123, 18, 37, 0.03);
+      padding-left: 1.8rem;
+      color: var(--charcoal);
+    }
+
+    .loc-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--crimson);
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .location-points li:hover .loc-dot {
+      background: var(--gold);
+      transform: scale(1.3);
+      box-shadow: 0 0 8px rgba(197, 165, 90, 0.6);
+    }
+
+    /* Glowing pulse for active highlight bullet */
+    @keyframes locPulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(2.2); opacity: 0; }
+    }
+    .loc-dot::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 50%;
+      border: 2px solid var(--crimson);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .location-points li:hover .loc-dot::before {
+      opacity: 1;
+      animation: locPulse 1.8s infinite ease-out;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--crimson-dark);
+      text-align: center;
+      padding: 7rem 4rem;
+    }
+
+    .contact .section-label {
+      justify-content: center;
+      color: var(--gold-light);
+    }
+
+    .contact .section-label::before {
+      background: var(--gold);
+    }
+
+    .contact .section-title {
+      color: #fff;
+      text-align: center;
+      margin: 0 auto 1rem;
+      max-width: 600px;
+    }
+
+    .contact-sub {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+
+    .contact-form {
+      max-width: 560px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(197, 165, 90, 0.25);
+      color: #fff;
+      padding: 14px 18px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .contact-form textarea {
+      grid-column: span 2;
+      resize: none;
+      height: 120px;
+    }
+
+    .contact-form .btn-gold {
+      grid-column: span 2;
+      background: var(--gold);
+      border: none;
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 16px;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .contact-form .btn-gold:hover {
+      background: var(--gold-light);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f0709;
+      padding: 3rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-brand {
+      display: block;
+    }
+
+    .footer-brand img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .footer-info {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      line-height: 1.7;
+    }
+
+    .footer-copy {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.3);
+      letter-spacing: 1px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-socials a {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-socials a:hover {
+      color: var(--gold-light);
+    }
+
+    /* LOCATION CONNECTION */
+    .connection-section {
+      background: var(--cream);
+      padding: 7rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .connection-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 4.5rem;
+    }
+    .connection-header .section-label {
+      justify-content: center;
+    }
+    .connection-header .section-label::before {
+      display: none;
+    }
+    .connection-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--charcoal);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .connection-header h2 span {
+      color: var(--gold);
+      font-weight: 600;
+      display: block;
+      margin-top: 0.3rem;
+    }
+    .connection-header p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+    .connection-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 6rem;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .connection-map-container {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+      border: 1px solid var(--border-light);
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Radar/Scan sweep effect */
+    .connection-map-container::after {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      background: linear-gradient(45deg, transparent 45%, rgba(197, 165, 90, 0.12) 50%, transparent 55%);
+      transform: rotate(0deg);
+      pointer-events: none;
+      animation: radarScan 8s infinite linear;
+      z-index: 2;
+    }
+
+    @keyframes radarScan {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .connection-map-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+      filter: brightness(0.95) contrast(1.02);
+    }
+    .connection-map-container:hover img {
+      transform: scale(1.04);
+      filter: brightness(1.02) contrast(1.05);
+    }
+    .connection-map-container:hover {
+      box-shadow: 0 25px 50px rgba(197, 165, 90, 0.12);
+      border-color: rgba(197, 165, 90, 0.4);
+    }
+    .connection-info {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-left: 2rem;
+    }
+    .connection-info::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold) 0%, rgba(197, 165, 90, 0.15) 100%);
+    }
+    .connection-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-bottom: 2rem;
+      position: relative;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease;
+      border-radius: 8px;
+      padding-left: 1rem;
+      margin-left: -1rem;
+    }
+    .connection-item:last-child {
+      padding-bottom: 0;
+    }
+
+    /* Staggered entrance animation when connection section is visible */
+    .connection-section.visible .connection-item {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .connection-section.visible .connection-item:nth-child(1) { transition-delay: 0.1s; }
+    .connection-section.visible .connection-item:nth-child(2) { transition-delay: 0.2s; }
+    .connection-section.visible .connection-item:nth-child(3) { transition-delay: 0.3s; }
+    .connection-section.visible .connection-item:nth-child(4) { transition-delay: 0.4s; }
+    .connection-section.visible .connection-item:nth-child(5) { transition-delay: 0.5s; }
+
+    /* Timeline dots */
+    .connection-item::before {
+      content: '';
+      position: absolute;
+      left: -26px;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: 2px solid var(--gold);
+      z-index: 3;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    @keyframes timelinePulse {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(2.2); opacity: 0; }
+    }
+    .connection-item:first-child::after {
+      content: '';
+      position: absolute;
+      left: -26px;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(197, 165, 90, 0.4);
+      z-index: 2;
+      animation: timelinePulse 2s infinite ease-out;
+      pointer-events: none;
+    }
+
+    .connection-item:hover {
+      background: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 8px 20px rgba(123, 18, 37, 0.02);
+      transform: translateX(8px);
+    }
+
+    .connection-item:hover::before {
+      background: var(--crimson);
+      border-color: var(--crimson);
+      transform: scale(1.4);
+      box-shadow: 0 0 8px rgba(123, 18, 37, 0.5);
+    }
+
+    .connection-time {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      transition: color 0.3s ease;
+    }
+    .connection-item:hover .connection-time {
+      color: var(--crimson);
+    }
+    .connection-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      font-weight: 300;
+      transition: color 0.3s ease;
+    }
+    .connection-item:hover .connection-desc {
+      color: var(--charcoal);
+    }
+
+    /* FLOATING CONTACT SIDEBAR */
+    .floating-buttons {
+      position: fixed;
+      left: 24px;
+      bottom: 120px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: floatIn 0.8s 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    @keyframes floatIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .float-btn {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Outer Ring (concentric circle) */
+    .float-btn-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      z-index: 1;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+      animation: ringBreath 3s infinite ease-in-out;
+    }
+
+    @keyframes ringBreath {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.08); opacity: 0.4; }
+    }
+
+    .float-fb .float-btn-ring { background: rgba(24, 119, 242, 0.25); animation-delay: 0s; }
+    .float-zalo .float-btn-ring { background: rgba(0, 104, 255, 0.25); animation-delay: 0.5s; }
+    .float-phone .float-btn-ring { background: rgba(0, 168, 84, 0.25); animation-delay: 1s; }
+
+    /* Inner Solid Circle */
+    .float-btn-circle {
+      position: relative;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 2;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+
+    .float-fb .float-btn-circle { background: #1877F2; }
+    .float-zalo .float-btn-circle { background: #0068FF; }
+    .float-phone .float-btn-circle { background: #00A854; }
+
+    .float-btn-circle svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+      transition: transform 0.3s ease;
+      animation: iconWiggle 6s infinite ease-in-out;
+    }
+
+    .float-fb svg { animation-delay: 0s; }
+    .float-zalo svg { animation-delay: 2s; }
+    .float-phone svg { animation-delay: 4s; }
+
+    @keyframes iconWiggle {
+      0%, 90%, 100% { transform: rotate(0deg); }
+      92% { transform: rotate(-15deg); }
+      94% { transform: rotate(12deg); }
+      96% { transform: rotate(-10deg); }
+      98% { transform: rotate(8deg); }
+    }
+
+    .float-btn:hover {
+      transform: scale(1.05) translateX(4px);
+    }
+    .float-btn:hover .float-btn-ring {
+      transform: scale(1.15);
+      opacity: 0.8;
+    }
+    .float-btn:hover .float-btn-circle {
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+    .float-btn:hover svg {
+      transform: scale(1.1) rotate(15deg);
+      animation-play-state: paused;
+    }
+
+    /* Call Button Active Sonar Ripples */
+    .float-phone::before,
+    .float-phone::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: rgba(0, 168, 84, 0.4);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .float-phone::before { animation: sonarRipple 2s infinite ease-out; }
+    .float-phone::after { animation: sonarRipple 2s infinite ease-out 1s; }
+
+    @keyframes sonarRipple {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+
+    .float-btn::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 72px;
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-10px);
+      transition: all 0.3s ease;
+      font-family: 'Outfit', sans-serif;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      pointer-events: none;
+      z-index: 999;
+    }
+    .float-btn:hover::after {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    /* SITE PLAN / MẶT BẰNG & GALLERY SECTION */
+    .site-plan-section {
+      background: var(--off-white);
+      padding: 7rem 4rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+    
+    .gallery-categories {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+    
+    .category-btn {
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid var(--border-light);
+      color: var(--charcoal);
+      padding: 0.9rem 2rem;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+      font-family: 'Outfit', sans-serif;
+    }
+    
+    .category-btn:hover, .category-btn.active {
+      background: var(--crimson-dark);
+      color: #fff;
+      border-color: var(--crimson-dark);
+      box-shadow: 0 4px 15px rgba(90, 13, 28, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    .gallery-display-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 3.5rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      align-items: stretch;
+    }
+    
+    .gallery-sidebar {
+      background: rgba(255, 255, 255, 0.45);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .gallery-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    
+    .gallery-list-item {
+      padding: 1.1rem 1.4rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(197, 165, 90, 0.1);
+      color: var(--charcoal);
+      font-size: 13.5px;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    
+    .gallery-list-item::before {
+      content: '✦';
+      color: var(--gold);
+      font-size: 10px;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-list-item:hover, .gallery-list-item.active {
+      background: var(--crimson);
+      color: #fff;
+      border-color: var(--crimson);
+      transform: translateX(6px);
+      box-shadow: 0 4px 12px rgba(123, 18, 37, 0.15);
+    }
+    
+    .gallery-list-item:hover::before, .gallery-list-item.active::before {
+      color: var(--gold-light);
+      transform: rotate(45deg) scale(1.2);
+    }
+    
+    .gallery-viewer-box {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .gallery-screen {
+      position: relative;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+      border: 1px solid var(--border-light);
+      background: #fafafa;
+      padding: 1rem;
+      aspect-ratio: 16/10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .gallery-screen img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+      transition: opacity 0.3s ease, transform 0.5s ease;
+      cursor: zoom-in;
+    }
+    
+    .gallery-screen img:hover {
+      transform: scale(1.015);
+    }
+    
+    .gallery-nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border-light);
+      color: var(--charcoal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    
+    .gallery-nav-arrow:hover {
+      background: var(--crimson);
+      color: #fff;
+      border-color: var(--crimson);
+      box-shadow: 0 5px 15px rgba(123, 18, 37, 0.25);
+    }
+    
+    .gallery-nav-arrow.arrow-left { left: 20px; }
+    .gallery-nav-arrow.arrow-right { right: 20px; }
+    
+    .gallery-zoom-trigger {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--border-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    
+    .gallery-zoom-trigger:hover {
+      background: var(--gold);
+      color: #fff;
+      border-color: var(--gold);
+      transform: scale(1.1);
+    }
+    
+    .gallery-thumbnails {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding: 0.5rem 0.2rem;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(197, 165, 90, 0.3) transparent;
+    }
+    
+    .gallery-thumbnails::-webkit-scrollbar {
+      height: 5px;
+    }
+    
+    .gallery-thumbnails::-webkit-scrollbar-thumb {
+      background: rgba(197, 165, 90, 0.3);
+      border-radius: 4px;
+    }
+    
+    .gallery-thumb-item {
+      flex: 0 0 120px;
+      aspect-ratio: 16/10;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    
+    .gallery-thumb-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .gallery-thumb-item:hover, .gallery-thumb-item.active {
+      opacity: 1;
+      border-color: var(--crimson);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(123, 18, 37, 0.1);
+    }
+    
+    /* LIGHTBOX OVERLAY */
+    .gallery-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(10, 5, 3, 0.95);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .gallery-lightbox.active {
+      display: flex;
+      opacity: 1;
+    }
+    
+    .gallery-lightbox img {
+      max-width: 95%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      transform: scale(0.95);
+      transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    
+    .gallery-lightbox.active img {
+      transform: scale(1);
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: rgba(255,255,255,0.7);
+      font-size: 40px;
+      font-weight: 300;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    
+    .lightbox-close:hover {
+      color: #fff;
+    }
+    
+    @media (max-width: 900px) {
+      .gallery-display-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .gallery-sidebar {
+        padding: 1rem;
+      }
+      .gallery-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .gallery-list-item {
+        flex: 1 1 calc(50% - 0.5rem);
+      }
+    }
+    @media (max-width: 600px) {
+      .gallery-list-item {
+        flex: 1 1 100%;
+      }
+      .gallery-nav-arrow {
+        width: 36px;
+        height: 36px;
+      }
+      .gallery-nav-arrow.arrow-left { left: 10px; }
+      .gallery-nav-arrow.arrow-right { right: 10px; }
+    }
+
+    /* TYPICAL FLOOR PLANS SECTION */
+    .typical-floor-section {
+      background: var(--cream);
+      padding: 7rem 4rem;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .floor-slider-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 15px 40px rgba(123, 18, 37, 0.03);
+      padding: 3rem;
+    }
+
+
+
+    .floor-viewer {
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fafafa;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .floor-img-wrap {
+      width: 100%;
+      max-height: 700px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .floor-img-wrap img {
+      max-width: 100%;
+      height: auto;
+      max-height: 700px;
+      object-fit: contain;
+      display: block;
+      transition: opacity 0.3s ease, transform 0.5s ease;
+      cursor: zoom-in;
+    }
+
+    .floor-img-wrap img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Slider Nav Arrows */
+    .floor-nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border-light);
+      color: var(--charcoal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .floor-nav-arrow:hover {
+      background: var(--crimson);
+      color: #fff;
+      border-color: var(--crimson);
+      box-shadow: 0 6px 18px rgba(123, 18, 37, 0.3);
+    }
+
+    .arrow-left { left: 20px; }
+    .arrow-right { right: 20px; }
+
+    /* Pagination Dots */
+    .floor-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 2rem;
+    }
+
+    .floor-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(197, 165, 90, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .floor-dot.active {
+      background: var(--crimson);
+      transform: scale(1.2);
+      box-shadow: 0 0 8px rgba(123, 18, 37, 0.4);
+    }
+
+    @media (max-width: 900px) {
+      .typical-floor-section { padding: 4rem 1.5rem; }
+      .floor-slider-container { padding: 2rem 1rem 1.5rem; }
+      .floor-nav-arrow { width: 38px; height: 38px; }
+      .arrow-left { left: 5px; }
+      .arrow-right { right: 5px; }
+    }
+
+    /* SHOWROOM / MẪU CĂN HỘ */
+    .showroom-section {
+      background: var(--cream);
+      padding: 7rem 4rem;
+    }
+    .showroom-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      align-items: start;
+    }
+    .showroom-tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .showroom-tab {
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid var(--border-light);
+      padding: 1.1rem 1.5rem;
+      border-radius: 6px;
+      color: var(--charcoal);
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .showroom-tab:hover, .showroom-tab.active {
+      background: var(--crimson-dark);
+      color: #fff;
+      border-color: var(--crimson-dark);
+      transform: translateX(5px);
+    }
+    .showroom-content {
+      transition: opacity 0.2s ease-in-out;
+    }
+    .showroom-detail-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4rem;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+      border: 1px solid var(--border-light);
+    }
+    .showroom-images-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .showroom-main-img {
+      border-radius: 6px;
+      overflow: hidden;
+      aspect-ratio: 16/10;
+    }
+    .showroom-main-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .showroom-thumb-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .showroom-thumb-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+      aspect-ratio: 4/3;
+    }
+    .showroom-info-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .room-tag {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--crimson);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.8rem;
+    }
+    .showroom-info-col h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+    .room-sub {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    .room-divider {
+      height: 1px;
+      background: var(--border-light);
+      margin-bottom: 1.5rem;
+    }
+    .showroom-info-col p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+    .room-specs {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .room-specs li {
+      font-size: 13.5px;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .room-specs li::before {
+      content: '✦';
+      color: var(--gold);
+    }
+
+
+    /* PRICING & OFFER */
+    .pricing-section {
+      background: var(--off-white);
+      padding: 7rem 4rem;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      align-items: center;
+    }
+    .pricing-visual {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      aspect-ratio: 4/5;
+    }
+    .pricing-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .pricing-visual-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(90, 13, 28, 0.95) 0%, rgba(90, 13, 28, 0.4) 50%, transparent 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 3rem;
+    }
+    .pricing-visual-overlay h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: #fff;
+      line-height: 1.2;
+      letter-spacing: 1px;
+    }
+    .pricing-visual-overlay h3 em {
+      color: var(--gold-light);
+      font-style: italic;
+      font-weight: 400;
+      display: block;
+    }
+    .pricing-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .pricing-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: var(--crimson-dark);
+      padding: 1.2rem 2rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 25px rgba(90, 13, 28, 0.15);
+      border: 1px solid rgba(197, 165, 90, 0.2);
+    }
+    .badge-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+    .badge-price {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      font-family: 'Outfit', sans-serif;
+    }
+    .pricing-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 1.5rem;
+      border-left: 3px solid var(--crimson);
+      padding-left: 1rem;
+    }
+    .pricing-policy-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .pricing-policy-list li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+    .pricing-policy-list li::before {
+      content: '✓';
+      color: var(--crimson);
+      font-weight: bold;
+      margin-top: 2px;
+    }
+    .pricing-form-box {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+      border: 1px solid var(--border-light);
+    }
+    .pricing-form-box h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .pform {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .pform-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .pform input {
+      background: rgba(0,0,0,0.02);
+      border: 1px solid var(--border-light);
+      color: var(--charcoal);
+      padding: 12px 16px;
+      font-size: 13.5px;
+      font-family: 'Outfit', sans-serif;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    .pform input:focus {
+      border-color: var(--crimson);
+      background: #fff;
+    }
+
+    /* ANIMATIONS */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        padding: 0 1.5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      section {
+        padding: 4rem 1.5rem;
+      }
+
+      .about,
+      .legal-grid,
+      .location-inner,
+      .connection-grid,
+      .site-plan-grid,
+      .showroom-grid,
+      .showroom-detail-grid,
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .plan-tabs, .showroom-tabs {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .plan-tab, .showroom-tab {
+        flex: 1 1 calc(50% - 0.5rem);
+        text-align: center;
+      }
+
+      .options-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+      }
+
+      .pform-row {
+        grid-template-columns: 1fr;
+      }
+
+      .floating-buttons {
+        left: 16px;
+        bottom: 80px;
+        gap: 12px;
+      }
+
+      .float-btn {
+        width: 50px;
+        height: 50px;
+      }
+
+      .float-btn-circle {
+        width: 36px;
+        height: 36px;
+      }
+
+      .float-btn-circle svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .float-btn::after {
+        display: none; /* Hide tooltips on mobile screen */
+      }
+
+      .amenity-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .stats-bar {
+        grid-template-columns: 1fr 1fr;
+      }
+      .stat-item:nth-child(2n) {
+        border-right: none;
+      }
+      .stat-item:nth-child(1), .stat-item:nth-child(2) {
+        border-bottom: 1px solid rgba(197, 165, 90, 0.2);
+      }
+
+      .hero-content {
+        padding: 0 1.5rem 4rem;
+      }
+
+      .hero-scroll {
+        display: none;
+      }
+
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form textarea,
+      .contact-form .btn-gold {
+        grid-column: span 1;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .amenity-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .stats-bar {
+        grid-template-columns: 1fr;
+      }
+      .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(197, 165, 90, 0.2);
+      }
+      .stat-item:last-child {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <img src="Image/logo-Gotec-Land-white-768x300.webp" alt="Gotec Land">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Trang chủ</a></li>
+      <li><a href="#about">Tổng quan</a></li>
+      <li><a href="#gallery">Mặt bằng</a></li>
+      <li><a href="#location">Vị trí</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Đăng ký tư
+      vấn</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <div class="hero-label">NHÀ Ở · ĐÀ NẴNG</div>
+      <h1 class="hero-title">Nam Ô<br><em>Discovery</em></h1>
+      <p class="hero-sub">Ôm trọn vịnh biển Đà Nẵng xanh bất tận, dãy núi hùng vĩ và dòng Cu Đê thơ mộng. Một bước chân
+        chạm đến đại dương.</p>
+      <div class="hero-actions">
+        <button class="btn-primary"
+          onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận báo giá</button>
+        <button class="btn-outline" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">Xem
+          thư viện</button>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Khám phá</span>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar fade-up">
+    <div class="stat-item">
+      <div class="stat-label">Diện tích</div>
+      <div class="stat-value"><span class="stat-number" data-target="4309" data-format="dot">0</span> m²</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">Số Block</div>
+      <div class="stat-value"><span class="stat-number" data-target="2">0</span></div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">Số Tầng</div>
+      <div class="stat-value"><span class="stat-number" data-target="34">0</span></div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">Tổng sản phẩm</div>
+      <div class="stat-value"><span class="stat-number" data-target="487">0</span> căn</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about fade-up" id="about">
+    <div class="about-text">
+      <div class="section-label">Giới thiệu dự án</div>
+      <h2 class="section-title">Nơi thiên nhiên gặp gỡ đẳng cấp sống</h2>
+      <p>Nam Ô Discovery ôm trọn vào lòng những gì đắt giá nhất của khu vực: từ vịnh biển Đà Nẵng xanh bất tận đến dãy
+        núi hùng vĩ, từ dòng Cu Đê thơ mộng đến những khu phố du lịch di sản.</p>
+      <p>Một bước chân chạm đến đại dương, một nhịp kết nối phố thị — tận hưởng trọn vẹn sự bình yên lẫn sôi động trong
+        từng khoảnh khắc. Đây không chỉ là nơi để ở, mà là nơi để sống trọn vẹn.</p>
+      <p style="margin-bottom: 2rem;">Chủ đầu tư: <strong>Gotec Land</strong> — thương hiệu bất động sản uy tín với
+        nhiều dự án thành công trên toàn quốc.</p>
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Tìm
+        hiểu thêm</button>
+    </div>
+    <div class="about-images">
+      <img class="about-img tall"
+        src="https://gotecland.vn/image/TCKe_OtgeYcaiK2z9D9U6lDjerkxaCnWUpskbQY47UQ/file/media/uploads/2026/03/7k_NAMO_DISCOVERY_CORNERVIEW_rz.jpg"
+        alt="Nam Ô Discovery góc nhìn" loading="lazy">
+      <img class="about-img"
+        src="https://gotecland.vn/image/KE4ylehXKfya4UJujbrRWVoIPoCn5-J7HWkFKOmMMlk/file/media/uploads/2026/03/7k_ASV_SHIZENNAMI_HoBoi_HoangHon2_rz.jpg"
+        alt="Hồ bơi hoàng hôn" loading="lazy">
+      <img class="about-img"
+        src="https://gotecland.vn/image/5KFTiMoW1T1WBEwN9BErCS34WozTQN9l5O0WDrtEaHg/file/media/uploads/2026/03/241126_PCG02_ChillBar_rz.jpg"
+        alt="Chill Bar" loading="lazy">
+    </div>
+  </section>
+
+  <!-- AMENITIES -->
+  <section class="amenities fade-up" id="amenities">
+    <div class="amenities-header">
+      <div class="section-label">Tiện ích nội khu</div>
+      <h2 class="section-title">Cuộc sống tiện nghi toàn diện</h2>
+      <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7; font-weight:300;">Hệ thống tiện ích đẳng cấp được thiết kế để phục vụ mọi nhu cầu của cư dân, từ thư giãn đến vận động và kết nối cộng đồng.</p>
+    </div>
+    <div class="amenity-grid">
+      <div class="amenity-card">
+        <div class="amenity-icon">
+          <!-- Pool outline SVG -->
+          <svg class="icon-pool" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 6c.6.5 1.2 1 2.5 1C5.8 7 7 6 7 6s1.2-1 2.5-1c1.3 0 2.5 1 2.5 1s1.2 1 2.5 1c1.3 0 2.5-1 2.5-1"/>
+            <path d="M2 12c.6.5 1.2 1 2.5 1c1.3 0 2.5-1 2.5-1s1.2-1 2.5-1c1.3 0 2.5 1 2.5 1s1.2 1 2.5 1c1.3 0 2.5-1 2.5-1"/>
+            <path d="M2 18c.6.5 1.2 1 2.5 1c1.3 0 2.5-1 2.5-1s1.2-1 2.5-1c1.3 0 2.5 1 2.5 1s1.2 1 2.5 1c1.3 0 2.5-1 2.5-1"/>
+          </svg>
+        </div>
+        <div class="amenity-name">Hồ bơi</div>
+        <div class="amenity-desc">Hồ bơi vô cực tầm nhìn hướng biển, không gian thư giãn sang trọng.</div>
+      </div>
+      
+      <div class="amenity-card">
+        <div class="amenity-icon">
+          <!-- Gym outline SVG -->
+          <svg class="icon-gym" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6.5 6.5h11M6.5 17.5h11M18 5v14M6 5v14M3 8v8M21 8v8"/>
+          </svg>
+        </div>
+        <div class="amenity-name">Phòng Gym</div>
+        <div class="amenity-desc">Trang thiết bị hiện đại, không gian tập luyện chuyên nghiệp đẳng cấp 5 sao.</div>
+      </div>
+      
+      <div class="amenity-card">
+        <div class="amenity-icon">
+          <!-- Tree/Park outline SVG -->
+          <svg class="icon-park" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22v-8M17 14c2.8 0 5-2.2 5-5s-2.2-5-5-5c-.4 0-.8.1-1.2.2C15 2.1 12.8 1 10.5 1 6.9 1 4 3.9 4 7.5c0 .4.1.8.2 1.2C2.1 9.4 1 11.6 1 14c0 2.8 2.2 5 5 5h11z"/>
+          </svg>
+        </div>
+        <div class="amenity-name">Công viên xanh</div>
+        <div class="amenity-desc">Không gian xanh rộng lớn, vườn cảnh quan thiết kế nghệ thuật độc đáo.</div>
+      </div>
+      
+      <div class="amenity-card">
+        <div class="amenity-icon">
+          <!-- Market outline SVG -->
+          <svg class="icon-market" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"/>
+            <circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+        </div>
+        <div class="amenity-name">Siêu thị</div>
+        <div class="amenity-desc">Trung tâm thương mại ngay tại tầng đế, đáp ứng mọi nhu cầu mua sắm.</div>
+      </div>
+      
+      <div class="amenity-card">
+        <div class="amenity-icon">
+          <!-- Child smile outline SVG -->
+          <svg class="icon-child" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <div class="amenity-name">Nhà trẻ</div>
+        <div class="amenity-desc">Cơ sở giáo dục mầm non chất lượng cao ngay trong khuôn viên dự án.</div>
+      </div>
+      
+      <div class="amenity-card">
+        <div class="amenity-icon">
+          <!-- Community outline SVG -->
+          <svg class="icon-community" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div class="amenity-name">Cộng đồng</div>
+        <div class="amenity-desc">Khu sinh hoạt cộng đồng, không gian kết nối cư dân và tổ chức sự kiện.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SITE PLAN / MẶT BẰNG & GALLERY SECTION -->
+  <section class="site-plan-section fade-up" id="gallery">
+    <div class="connection-header">
+      <div class="section-label">Trung tâm trải nghiệm thực tế</div>
+      <h2>Mặt Bằng Thiết Kế &amp; <span>Phối Cảnh 3D Chi Tiết</span></h2>
+      <p>Khám phá bản đồ chi tiết, sơ đồ thiết kế mặt bằng tổng thể 2 tòa tháp cùng những góc phối cảnh 3D tiện ích và kiến trúc tinh xảo của Nam Ô Discovery.</p>
+    </div>
+    
+    <div class="gallery-categories">
+      <button class="category-btn active" onclick="switchGalleryCategory('layouts')">Mặt Bằng &amp; Sơ Đồ</button>
+      <button class="category-btn" onclick="switchGalleryCategory('amenities')">Tiện Ích 3D</button>
+      <button class="category-btn" onclick="switchGalleryCategory('architecture')">Kiến Trúc &amp; Cảnh Quan</button>
+    </div>
+
+    <div class="gallery-display-grid">
+      <div class="gallery-sidebar">
+        <ul class="gallery-list" id="galleryList">
+          <!-- Populated dynamically via JS -->
+        </ul>
+      </div>
+      <div class="gallery-viewer-box">
+        <div class="gallery-screen">
+          <button class="gallery-nav-arrow arrow-left" onclick="prevGalleryImage()" aria-label="Slide trước">❮</button>
+          <img id="galleryActiveImg" src="Image/241205_BV-TONG1FINAL_10K_rz.webp" alt="Hình ảnh trực quan Nam Ô Discovery">
+          <button class="gallery-nav-arrow arrow-right" onclick="nextGalleryImage()" aria-label="Slide tiếp theo">❯</button>
+          <button class="gallery-zoom-trigger" onclick="openGalleryLightbox()" aria-label="Phóng to ảnh">🔍</button>
+        </div>
+        <div class="gallery-thumbnails" id="galleryThumbnails">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPICAL FLOOR PLANS / MẶT BẰNG TẦNG ĐIỂN HÌNH -->
+  <section class="typical-floor-section fade-up" id="typical-floors">
+    <div class="connection-header">
+      <div class="section-label">Sơ đồ mặt bằng</div>
+      <h2>Mặt Bằng Tầng Điển Hình <span>Nam Ô Discovery</span></h2>
+      <p>Bố cục mặt bằng các tầng được phân bổ khoa học, tối ưu hóa công năng sử dụng với hành lang rộng thoáng, sảnh thang máy biệt lập và các khu vực lánh nạn an toàn đạt chuẩn quốc tế.</p>
+    </div>
+
+    <div class="floor-slider-container">
+
+      <div class="floor-viewer">
+        <button class="floor-nav-arrow arrow-left" onclick="prevFloor()" aria-label="Slide trước">❮</button>
+        <div class="floor-img-wrap">
+          <img id="floorPlanImg" src="Image/nam_o_discovery_floor_5_21.png" alt="Mặt bằng Tầng điển hình Nam Ô Discovery">
+        </div>
+        <button class="floor-nav-arrow arrow-right" onclick="nextFloor()" aria-label="Slide tiếp theo">❯</button>
+      </div>
+
+      <div class="floor-dots">
+        <div class="floor-dot active" onclick="switchFloor(0)"></div>
+        <div class="floor-dot" onclick="switchFloor(1)"></div>
+        <div class="floor-dot" onclick="switchFloor(2)"></div>
+        <div class="floor-dot" onclick="switchFloor(3)"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- APARTMENT SHOWROOM / MẪU CĂN HỘ -->
+  <section class="showroom-section fade-up" id="showroom">
+    <div class="connection-header">
+      <div class="section-label">Mẫu căn hộ</div>
+      <h2>Thiết Kế Căn Hộ <span>Không Gian Sống Thông Minh &amp; Sang Trọng</span></h2>
+      <p>Mỗi căn hộ tại Nam Ô Discovery đều được thiết kế tối ưu diện tích, với hơn 99% căn hộ sở hữu ban công kính ôm trọn vịnh biển Đà Nẵng, đón nắng gió tự nhiên trong lành.</p>
+    </div>
+    
+    <div class="showroom-grid">
+      <div class="showroom-tabs">
+        <button class="showroom-tab active" onclick="switchShowroom(this, '1pn')">Căn hộ 1 phòng ngủ</button>
+        <button class="showroom-tab" onclick="switchShowroom(this, '2pn')">Căn hộ 2 phòng ngủ</button>
+        <button class="showroom-tab" onclick="switchShowroom(this, '3pn')">Căn hộ 3 phòng ngủ</button>
+      </div>
+      
+      <div class="showroom-content" id="showroomContent">
+        <div class="showroom-detail-grid">
+          <div class="showroom-images-col">
+            <div class="showroom-main-img">
+              <img src="Image/7k_NAMO_DISCOVERY_CORNERVIEW_rz.webp" alt="Phối cảnh phòng khách 1PN">
+            </div>
+            <div class="showroom-thumb-grid">
+              <img src="Image/241126_PCG02_ChillBar_rz.webp" alt="Nội thất phòng ngủ 1PN">
+              <img src="Image/7k_ASV_SHIZENNAMI_HoBoi_HoangHon2_rz.webp" alt="Mặt bằng 2D 1PN">
+            </div>
+          </div>
+          <div class="showroom-info-col">
+            <span class="room-tag">Diện tích: 51m² - 54m²</span>
+            <h3>Căn Hộ 1 Phòng Ngủ</h3>
+            <span class="room-sub">Thiết kế thông minh, tối ưu công năng và tính linh hoạt</span>
+            <div class="room-divider"></div>
+            <p>Phù hợp với khách hàng độc thân, các cặp vợ chồng trẻ hoặc nhà đầu tư khai thác homestay/khách sạn. Phòng khách rộng rãi kết nối liền mạch với ban công kính tràn viền hướng biển, mang đại dương vào phòng ngủ của bạn.</p>
+            <ul class="room-specs">
+              <li><strong>Ban công:</strong> Hướng biển trực diện</li>
+              <li><strong>Phòng khách:</strong> Thiết kế mở rộng rãi</li>
+              <li><strong>Bàn giao:</strong> Hoàn thiện nội thất 5 sao (Tháp A)</li>
+            </ul>
+            <button class="btn-primary" style="margin-top: 1.5rem;" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận Báo Giá Căn 1PN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING & OFFER / GIÁ BÁN & ƯU ĐÃI -->
+  <section class="pricing-section fade-up" id="pricing">
+    <div class="pricing-grid">
+      <div class="pricing-visual">
+        <img src="Image/7k_NAMO_DISCOVERY_CORNERVIEW_rz.webp" alt="Phối cảnh Nam Ô Discovery đẳng cấp">
+        <div class="pricing-visual-overlay">
+          <h3>KẾT NỐI <em>ĐẲNG CẤP</em></h3>
+        </div>
+      </div>
+      
+      <div class="pricing-content">
+        <div class="pricing-badge-row">
+          <span class="badge-label">Giá Bán Dự Kiến Chỉ Từ</span>
+          <span class="badge-price">58 TR/M²</span>
+        </div>
+        
+        <h3 class="pricing-title">Chính Sách Ưu Đãi Đặc Biệt Đợt 1</h3>
+        
+        <ul class="pricing-policy-list">
+          <li><strong>Booking ưu tiên:</strong> Chỉ 50 triệu/căn (hoàn tiền 100% nếu không mua).</li>
+          <li><strong>Chiết khấu thanh toán sớm:</strong> Nhận chiết khấu lên đến 12% giá trị căn hộ.</li>
+          <li><strong>Hỗ trợ tài chính cực tốt:</strong> Hỗ trợ vay ngân hàng 70%, ân hạn nợ gốc và lãi suất 0% trong 18 tháng.</li>
+          <li><strong>Tiến độ thanh toán thư thả:</strong> Thanh toán linh hoạt chỉ từ 1% - 1.5% mỗi tháng.</li>
+          <li><strong>Quà tặng tân gia:</strong> Tặng ngay gói nội thất hoàn thiện chuẩn Worldhotels trị giá 150 triệu đồng.</li>
+        </ul>
+        
+        <div class="pricing-form-box">
+          <h4>Đăng Ký Nhận Bảng Giá Chi Tiết &amp; Căn Đẹp</h4>
+          <form class="pform" onsubmit="handlePriceSubmit(event)">
+            <div class="pform-row">
+              <input type="text" placeholder="Họ và tên *" required>
+              <input type="tel" placeholder="Số điện thoại *" required>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; border: none;">Nhận Bảng Giá Ngay →</button>
+          </form>
+          <div id="pform-success" style="display:none; margin-top:1rem; color:var(--gold-light); font-size:14px; font-weight: 500;">✓ Yêu cầu đã được gửi! Gotec Land sẽ phản hồi ngay.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGAL -->
+  <section class="legal fade-up" id="legal">
+    <div class="legal-grid">
+      <div>
+        <div class="section-label">Hồ sơ pháp lý</div>
+        <h2 class="section-title">Minh bạch &amp; đầy đủ pháp lý</h2>
+        <ul class="legal-docs">
+          <li>
+            <div class="doc-icon">
+              <!-- Seal Certificate stamp outline SVG -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <circle cx="10" cy="15" r="2"/>
+                <path d="M12 17l1 2"/>
+              </svg>
+            </div>
+            <span class="doc-name">Quyết định tên thương mại dự án</span>
+            <a href="https://gotecland.vn/media/uploads/2026/03/QD-TenThuongMaiDuAn-NamODiscovery.pdf" target="_blank"
+              class="doc-link">Xem</a>
+          </li>
+          <li>
+            <div class="doc-icon">
+              <!-- Building skeleton structure outline SVG -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="20" width="20" height="2" rx="1"/>
+                <path d="M6 20V4h3v16M13 20V8h3v12M17 20v-6h3v6"/>
+                <path d="M10 8h3v4h-3zM6 4h7v4H6zM10 12h3v4h-3z"/>
+              </svg>
+            </div>
+            <span class="doc-name">Giấy phép xây dựng</span>
+            <a href="https://gotecland.vn/media/uploads/2026/03/ASIANA-GPXD.pdf" target="_blank"
+              class="doc-link">Xem</a>
+          </li>
+          <li>
+            <div class="doc-icon">
+              <!-- Shield badge with checkmark outline SVG -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 11 2 2 4-4"/>
+              </svg>
+            </div>
+            <span class="doc-name">Giấy phép đủ điều kiện bán hàng</span>
+            <a href="https://gotecland.vn/media/uploads/2026/04/GPDuDieuKienBanHang.pdf" target="_blank"
+              class="doc-link">Xem</a>
+          </li>
+          <li>
+            <div class="doc-icon">
+              <!-- Ruler / Set square drawing drafting triangle outline SVG -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 20H4L20 4z"/>
+                <path d="M12 17h-2M15 14h-3M17 11v-1M14 8h-1M17 5v-1"/>
+              </svg>
+            </div>
+            <span class="doc-name">Quyết định phê duyệt 1:500</span>
+            <a href="https://gotecland.vn/media/uploads/2026/03/QĐ-PheDuyet1-500.pdf" target="_blank"
+              class="doc-link">Xem</a>
+          </li>
+          <li>
+            <div class="doc-icon">
+              <!-- Classic Bank columns vault outline SVG -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18M3 10h18M5 10v11M19 10v11M12 10v11M9 10v11M15 10v11M12 2L3 7h18z"/>
+              </svg>
+            </div>
+            <span class="doc-name">Thỏa thuận cấp bảo lãnh ngân hàng</span>
+            <a href="https://gotecland.vn/media/uploads/2026/03/ThoaThuanCapBaoLanh-AsianaParamount-23.11.21.pdf"
+              target="_blank" class="doc-link">Xem</a>
+          </li>
+          <li>
+            <div class="doc-icon">
+              <!-- Document sheet with layout ribbon lines outline SVG -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <line x1="12" y1="9" x2="8" y2="9"/>
+              </svg>
+            </div>
+            <span class="doc-name">Giấy chứng nhận quyền sử dụng đất</span>
+            <a href="https://gotecland.vn/media/uploads/2026/04/GCN.pdf" target="_blank" class="doc-link">Xem</a>
+          </li>
+        </ul>
+      </div>
+      <div class="legal-highlight">
+        <h3>Đầu tư an toàn, pháp lý rõ ràng</h3>
+        <p>Nam Ô Discovery được Gotec Land phát triển với đầy đủ hồ sơ pháp lý, đảm bảo quyền lợi tối đa cho khách hàng.
+          Dự án có giấy phép xây dựng, giấy phép đủ điều kiện bán hàng và bảo lãnh ngân hàng.</p>
+        <p>Mọi thông tin về giá bán, tiến độ thanh toán và hợp đồng mua bán đều được công khai minh bạch.</p>
+        <button class="btn-gold" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận hồ sơ chi tiết</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECTION -->
+  <section class="connection-section fade-up" id="location">
+    <div class="connection-header">
+      <div class="section-label">Liên kết vùng</div>
+      <h2>Vị Trí Kim Cương <span>Nơi Giao Thoa Của 4 Vùng Tâm Điểm</span></h2>
+      <p>Nằm kiêu hãnh tại trung tâm trục đại lộ biển đắt giá nhất quận Liên Chiểu – Nguyễn Tất Thành, Nam Ô Discovery mở ra khả năng kết nối không giới hạn, là tâm điểm giao thoa giữa cảnh quan sinh thái, giao thông đô thị và các tiện ích nghỉ dưỡng đẳng cấp quốc tế.</p>
+    </div>
+    <div class="connection-grid">
+      <div class="connection-map-container">
+        <img src="Image/nam_o_discovery_distance.png" alt="Bản đồ liên kết vùng Nam Ô Discovery">
+      </div>
+      <div class="connection-info">
+        <div class="connection-item">
+          <span class="connection-time">0 Phút</span>
+          <span class="connection-desc">Bãi tắm biển cát trắng Nam Ô (tiếp cận trực tiếp ngay trước thềm nhà) – Vịnh biển Đà Nẵng – Làng du lịch di sản Nam Ô.</span>
+        </div>
+        <div class="connection-item">
+          <span class="connection-time">2 Phút</span>
+          <span class="connection-desc">Tổ hợp khu nghỉ dưỡng &amp; Công viên nước Mikazuki Nhật Bản – Cầu Nam Ô – Sông Cu Đê sinh thái.</span>
+        </div>
+        <div class="connection-item">
+          <span class="connection-time">5 Phút</span>
+          <span class="connection-desc">Cảng quốc tế Liên Chiểu (trọng điểm logistics miền Trung) – Ủy ban nhân dân quận Liên Chiểu – Chợ Nam Ô truyền thống.</span>
+        </div>
+        <div class="connection-item">
+          <span class="connection-time">10 Phút</span>
+          <span class="connection-desc">Siêu dự án nghỉ dưỡng Vinpearl Làng Vân – Danh thắng Đèo Hải Vân hùng vĩ – Bến xe trung tâm thành phố Đà Nẵng.</span>
+        </div>
+        <div class="connection-item">
+          <span class="connection-time">15 Phút</span>
+          <span class="connection-desc">Sân bay quốc tế Đà Nẵng – Ga Đà Nẵng – Cầu Rồng, Cầu Sông Hàn – Trung tâm hành chính &amp; mua sắm TP. Đà Nẵng.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION MAP -->
+  <section class="location-section fade-up" id="google-map">
+    <div class="location-inner">
+      <div>
+        <div class="section-label">Vị trí</div>
+        <h2 class="section-title">Tọa lạc tại vịnh Nam Ô — Đà Nẵng</h2>
+        <p style="color:var(--text-muted); font-size:15px; line-height:1.75; margin-bottom:1.5rem; font-weight:300;">Dự
+          án nằm tại khu vực ven biển Nam Ô, nơi giao thoa của thiên nhiên hùng vĩ và đô thị hiện đại, kết nối thuận
+          tiện đến trung tâm thành phố Đà Nẵng.</p>
+        <ul class="location-points">
+          <li><span class="loc-dot"></span>Cách trung tâm Đà Nẵng khoảng 15 phút lái xe</li>
+          <li><span class="loc-dot"></span>Trực tiếp giáp bãi biển Nam Ô, tầm nhìn vịnh biển</li>
+          <li><span class="loc-dot"></span>Gần cầu Nam Ô, kết nối nhanh đến sân bay Đà Nẵng</li>
+          <li><span class="loc-dot"></span>Tiếp giáp dòng sông Cu Đê thơ mộng phía tây</li>
+          <li><span class="loc-dot"></span>Cận kề các khu nghỉ dưỡng và di sản du lịch</li>
+        </ul>
+      </div>
+      <div class="location-map-wrap">
+        <iframe class="location-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3831.9!2d108.111!3d16.155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219d7d90c5a1d%3A0xa9f1ae65de0bfef8!2sNam%20%C3%94%2C%20Li%C3%AAn%20Chi%E1%BB%83u%2C%20%C4%90%C3%A0%20N%E1%BA%B5ng!5e0!3m2!1svi!2svn!4v1680000000000"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bản đồ Nam Ô Discovery">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact fade-up" id="contact">
+    <div class="section-label">Liên hệ</div>
+    <h2 class="section-title">Đăng ký nhận tư vấn miễn phí</h2>
+    <p class="contact-sub">Để lại thông tin, chuyên viên của Gotec Land sẽ liên hệ bạn trong vòng 24 giờ.</p>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Họ và tên *" required>
+      <input type="tel" placeholder="Số điện thoại *" required>
+      <input type="email" placeholder="Email" style="grid-column:span 2">
+      <textarea placeholder="Nội dung quan tâm (loại căn, ngân sách...)"></textarea>
+      <button type="submit" class="btn-gold">Gửi yêu cầu tư vấn →</button>
+    </form>
+    <div id="form-success" style="display:none; margin-top:1.5rem; color:var(--gold-light); font-size:15px;">✓ Cảm ơn
+      bạn! Chúng tôi sẽ liên hệ sớm nhất.</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <div class="footer-brand">
+        <img src="Image/logo-Gotec-Land-white-768x300.webp" alt="Gotec Land">
+      </div>
+      <div class="footer-info" style="margin-top:0.5rem;">84 Huỳnh Văn Bánh, Phường Cầu Kiệu, TP. Hồ Chí Minh<br>Liên
+        hệ: 1900 638 074 · info@gotecland.vn</div>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/profile.php?id=61585555372401" target="_blank">Facebook</a>
+      <a href="https://zalo.me/1913540749972931403" target="_blank">Zalo</a>
+      <a href="mailto:info@gotecland.vn">Email</a>
+    </div>
+    <div class="footer-copy">© 2025 GoZone · All Rights Reserved</div>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.querySelector('.contact-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+
+    // PRESENTATION GALLERY DATA
+    const galleryData = {
+      layouts: [
+        {
+          title: "Mặt bằng tổng thể thiết kế",
+          src: "Image/241205_BV-TONG1FINAL_10K_rz.webp"
+        },
+        {
+          title: "Sơ đồ chi tiết khối đế trệt",
+          src: "Image/NAMODISCOVERY_TT2_rz.webp"
+        },
+        {
+          title: "Bản đồ vị trí & liên kết",
+          src: "Image/vi-tri-Shizen-Nami-da-nang-1.jpg"
+        }
+      ],
+      amenities: [
+        {
+          title: "Hồ bơi hoàng hôn hướng biển",
+          src: "Image/7k_ASV_SHIZENNAMI_HoBoi_HoangHon2_rz.webp"
+        },
+        {
+          title: "Hồ bơi vô cực ngày hè",
+          src: "Image/ho-boi-du-an-nam-o-discovery-1536x829.jpg"
+        },
+        {
+          title: "Không gian hồ bơi thư giãn",
+          src: "Image/nam-o-ho-boi-ngay-2.jpg"
+        },
+        {
+          title: "Chill Bar tầng thượng đẳng cấp",
+          src: "Image/241126_PCG02_ChillBar_rz.webp"
+        }
+      ],
+      architecture: [
+        {
+          title: "Phối cảnh góc tòa tháp căn hộ",
+          src: "Image/7k_NAMO_DISCOVERY_CORNERVIEW_rz.webp"
+        },
+        {
+          title: "Kiến trúc tòa tháp rực sáng về đêm",
+          src: "Image/phoi-canh-ve-dem-du-an-nam-o-discvovery-scaled.jpg"
+        }
+      ]
+    };
+
+    let activeCategory = 'layouts';
+    let activeImageIndex = 0;
+
+    function initGallery() {
+      switchGalleryCategory('layouts');
+    }
+
+    function switchGalleryCategory(category) {
+      activeCategory = category;
+      activeImageIndex = 0;
+
+      // Update category buttons
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        if (btn.getAttribute('onclick').includes(category)) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Populate sidebar list
+      const listContainer = document.getElementById('galleryList');
+      if (listContainer) {
+        listContainer.innerHTML = '';
+        galleryData[category].forEach((item, idx) => {
+          const li = document.createElement('li');
+          li.className = `gallery-list-item ${idx === 0 ? 'active' : ''}`;
+          li.textContent = item.title;
+          li.onclick = () => switchGalleryImage(idx);
+          listContainer.appendChild(li);
+        });
+      }
+
+      // Populate thumbnails
+      const thumbContainer = document.getElementById('galleryThumbnails');
+      if (thumbContainer) {
+        thumbContainer.innerHTML = '';
+        galleryData[category].forEach((item, idx) => {
+          const div = document.createElement('div');
+          div.className = `gallery-thumb-item ${idx === 0 ? 'active' : ''}`;
+          div.onclick = () => switchGalleryImage(idx);
+          div.innerHTML = `<img src="${item.src}" alt="${item.title}">`;
+          thumbContainer.appendChild(div);
+        });
+      }
+
+      updateGalleryViewer();
+    }
+
+    function switchGalleryImage(index) {
+      const items = galleryData[activeCategory];
+      if (index < 0 || index >= items.length) return;
+      activeImageIndex = index;
+
+      // Update sidebar active classes
+      document.querySelectorAll('.gallery-list-item').forEach((li, idx) => {
+        if (idx === index) li.classList.add('active');
+        else li.classList.remove('active');
+      });
+
+      // Update thumbnails active classes
+      document.querySelectorAll('.gallery-thumb-item').forEach((div, idx) => {
+        if (idx === index) div.classList.add('active');
+        else div.classList.remove('active');
+      });
+
+      updateGalleryViewer();
+    }
+
+    function updateGalleryViewer() {
+      const img = document.getElementById('galleryActiveImg');
+      const item = galleryData[activeCategory][activeImageIndex];
+      if (!img || !item) return;
+
+      img.style.opacity = 0.3;
+      setTimeout(() => {
+        img.src = item.src;
+        img.alt = item.title;
+        img.style.opacity = 1;
+      }, 150);
+    }
+
+    function prevGalleryImage() {
+      const items = galleryData[activeCategory];
+      let index = activeImageIndex - 1;
+      if (index < 0) index = items.length - 1;
+      switchGalleryImage(index);
+    }
+
+    function nextGalleryImage() {
+      const items = galleryData[activeCategory];
+      let index = activeImageIndex + 1;
+      if (index >= items.length) index = 0;
+      switchGalleryImage(index);
+    }
+
+    // Lightbox functions
+    function openGalleryLightbox() {
+      const lightbox = document.getElementById('galleryLightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const activeImg = document.getElementById('galleryActiveImg');
+      if (!lightbox || !lightboxImg || !activeImg) return;
+
+      lightboxImg.src = activeImg.src;
+      lightbox.classList.add('active');
+    }
+
+    function closeGalleryLightbox() {
+      const lightbox = document.getElementById('galleryLightbox');
+      if (lightbox) {
+        lightbox.classList.remove('active');
+      }
+    }
+
+    const showroomData = {
+      '1pn': {
+        tag: 'Diện tích: 51m² - 54m²',
+        title: 'Căn Hộ 1 Phòng Ngủ',
+        sub: 'Thiết kế thông minh, tối ưu công năng và tính linh hoạt',
+        desc: 'Phần lớn căn 1 phòng ngủ hướng vịnh biển xanh mát, sở hữu ban công kính rộng lớn đón gió biển trực tiếp. Không gian sống được thiết kế mở linh hoạt, bố cục thông minh tạo cảm giác thoáng đãng và rộng rãi.',
+        specs: [
+          '<strong>Tầm nhìn:</strong> Hướng biển vịnh Đà Nẵng',
+          '<strong>Công năng:</strong> Phòng khách mở và bếp liên thông',
+          '<strong>Bàn giao:</strong> Hoàn thiện nội thất 5 sao Worldhotels (Tháp A)'
+        ],
+        imgMain: 'Image/7k_NAMO_DISCOVERY_CORNERVIEW_rz.webp',
+        imgThumb1: 'Image/241126_PCG02_ChillBar_rz.webp',
+        imgThumb2: 'Image/7k_ASV_SHIZENNAMI_HoBoi_HoangHon2_rz.webp'
+      },
+      '2pn': {
+        tag: 'Diện tích: 70m² - 75m²',
+        title: 'Căn Hộ 2 Phòng Ngủ',
+        sub: 'Thiết kế tối ưu, ngập tràn ánh sáng tự nhiên',
+        desc: 'Sự lựa chọn lý tưởng dành cho gia đình hiện đại với 2 phòng ngủ riêng biệt, 2 nhà vệ sinh cao cấp chuẩn quốc tế. Hệ thống ban công và cửa kính lớn giúp căn hộ luôn tràn ngập ánh sáng và gió trời mát lành.',
+        specs: [
+          '<strong>Tầm nhìn:</strong> View biển &amp; sông Cu Đê sinh thái',
+          '<strong>Phân khu:</strong> Thiết kế riêng tư, ấm cúng',
+          '<strong>Bàn giao:</strong> Thiết bị vệ sinh Kohler, Bravat cao cấp'
+        ],
+        imgMain: 'Image/7k_ASV_SHIZENNAMI_HoBoi_HoangHon2_rz.webp',
+        imgThumb1: 'Image/241126_PCG02_ChillBar_rz.webp',
+        imgThumb2: 'Image/7k_NAMO_DISCOVERY_CORNERVIEW_rz.webp'
+      },
+      '3pn': {
+        tag: 'Diện tích: 92m² - 105m²',
+        title: 'Căn Hộ 3 Phòng Ngủ',
+        sub: 'Tầm nhìn Panorama đắt giá, nâng tầm trải nghiệm sống thượng lưu',
+        desc: 'Tọa lạc tại các vị trí góc đắt giá nhất, sở hữu tầm nhìn 270 độ bao trọn đèo Hải Vân và bờ biển Đà Nẵng. Không gian phòng master siêu rộng kèm bồn tắm kính riêng cao cấp hướng thẳng ra đại dương xanh thẳm.',
+        specs: [
+          '<strong>Tầm nhìn:</strong> Panorama 270 độ hướng vịnh biển',
+          '<strong>Đặc quyền:</strong> Suất đỗ xe định danh cao cấp',
+          '<strong>Không gian:</strong> Phòng khách đại tiệc rộng lớn'
+        ],
+        imgMain: 'Image/241205_BV-TONG1FINAL_10K_rz.webp',
+        imgThumb1: 'Image/7k_ASV_SHIZENNAMI_HoBoi_HoangHon2_rz.webp',
+        imgThumb2: 'Image/241126_PCG02_ChillBar_rz.webp'
+      }
+    };
+
+    function switchShowroom(btn, type) {
+      document.querySelectorAll('.showroom-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      
+      const data = showroomData[type];
+      const content = document.getElementById('showroomContent');
+      
+      content.style.opacity = 0;
+      setTimeout(() => {
+        content.innerHTML = `
+          <div class="showroom-detail-grid">
+            <div class="showroom-images-col">
+              <div class="showroom-main-img">
+                <img src="${data.imgMain}" alt="${data.title}">
+              </div>
+              <div class="showroom-thumb-grid">
+                <img src="${data.imgThumb1}" alt="Nội thất chi tiết">
+                <img src="${data.imgThumb2}" alt="Bản vẽ layout chi tiết">
+              </div>
+            </div>
+            <div class="showroom-info-col">
+              <span class="room-tag">${data.tag}</span>
+              <h3>${data.title}</h3>
+              <span class="room-sub">${data.sub}</span>
+              <div class="room-divider"></div>
+              <p>${data.desc}</p>
+              <ul class="room-specs">
+                ${data.specs.map(s => `<li>${s}</li>`).join('')}
+              </ul>
+              <button class="btn-primary" style="margin-top: 1.5rem;" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận Báo Giá ${data.title}</button>
+            </div>
+          </div>
+        `;
+        content.style.opacity = 1;
+      }, 200);
+    }
+
+
+    function handlePriceSubmit(e) {
+      e.preventDefault();
+      e.target.style.display = 'none';
+      document.getElementById('pform-success').style.display = 'block';
+    }
+
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-number');
+      counters.forEach(counter => {
+        const target = parseFloat(counter.getAttribute('data-target'));
+        const isDecimal = counter.getAttribute('data-format') === 'dot';
+        const duration = 2000;
+        const startTime = performance.now();
+        
+        function updateCount(currentTime) {
+          const elapsedTime = currentTime - startTime;
+          if (elapsedTime >= duration) {
+            if (isDecimal) {
+              counter.textContent = formatWithDot(target);
+            } else {
+              counter.textContent = Math.round(target);
+            }
+            return;
+          }
+          
+          const progress = elapsedTime / duration;
+          const easeProgress = progress * (2 - progress);
+          const currentValue = target * easeProgress;
+          
+          if (isDecimal) {
+            counter.textContent = formatWithDot(Math.round(currentValue));
+          } else {
+            counter.textContent = Math.round(currentValue);
+          }
+          
+          requestAnimationFrame(updateCount);
+        }
+        
+        function formatWithDot(num) {
+          return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+        
+        requestAnimationFrame(updateCount);
+      });
+    }
+
+    let statsAnimated = false;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          
+          if (entry.target.classList.contains('stats-bar') && !statsAnimated) {
+            statsAnimated = true;
+            animateCounters();
+          }
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // TYPICAL FLOOR PLANS SLIDER WITH SWIPE & AUTOPLAY
+    const floorPlans = [
+      'Image/nam_o_discovery_floor_5_21.png',
+      'Image/nam_o_discovery_floor_19.png',
+      'Image/nam_o_discovery_floor_22.png',
+      'Image/nam_o_discovery_floor_23_32.png'
+    ];
+    let currentFloorIndex = 0;
+    let autoPlayInterval;
+
+    function switchFloor(index) {
+      if (index < 0 || index >= floorPlans.length) return;
+      currentFloorIndex = index;
+      
+      const dots = document.querySelectorAll('.floor-dot');
+      dots.forEach((dot, idx) => {
+        if (idx === index) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+      
+      const img = document.getElementById('floorPlanImg');
+      img.style.opacity = 0.2;
+      setTimeout(() => {
+        img.src = floorPlans[index];
+        img.style.opacity = 1;
+      }, 150);
+    }
+
+    function prevFloor() {
+      let index = currentFloorIndex - 1;
+      if (index < 0) index = floorPlans.length - 1;
+      switchFloor(index);
+    }
+
+    function nextFloor() {
+      let index = currentFloorIndex + 1;
+      if (index >= floorPlans.length) index = 0;
+      switchFloor(index);
+    }
+
+    // Auto play setup
+    function startAutoPlay() {
+      clearInterval(autoPlayInterval);
+      autoPlayInterval = setInterval(nextFloor, 5000);
+    }
+
+    // Initialize Autoplay
+    startAutoPlay();
+
+    // Swipe and Drag gesture handling
+    document.addEventListener('DOMContentLoaded', () => {
+      initGallery(); // Initialize design plan interactive gallery center
+      
+      const viewer = document.querySelector('.floor-viewer');
+      const img = document.getElementById('floorPlanImg');
+      if (!viewer || !img) return;
+
+      let startX = 0;
+      let isDragging = false;
+
+      // Autoplay hover controls
+      const sliderContainer = document.querySelector('.floor-slider-container');
+      if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+        sliderContainer.addEventListener('mouseleave', startAutoPlay);
+      }
+
+      // Touch events for mobile
+      viewer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        clearInterval(autoPlayInterval);
+      }, { passive: true });
+
+      viewer.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        handleSwipe(startX, endX);
+        startAutoPlay();
+      }, { passive: true });
+
+      // Mouse events for drag-to-swipe on desktop
+      viewer.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        img.style.cursor = 'grabbing';
+        e.preventDefault(); // Prevent standard browser ghost image dragging
+        clearInterval(autoPlayInterval);
+      });
+
+      window.addEventListener('mouseup', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        img.style.cursor = 'zoom-in';
+        const endX = e.clientX;
+        handleSwipe(startX, endX);
+        startAutoPlay();
+      });
+
+      function handleSwipe(start, end) {
+        const threshold = 50; // minimum drag distance in pixels
+        const diff = end - start;
+        if (Math.abs(diff) > threshold) {
+          if (diff > 0) {
+            prevFloor();
+          } else {
+            nextFloor();
+          }
+        }
+      }
+    });
+  </script>
+
+  <!-- FLOATING ACTION BUTTONS -->
+  <div class="floating-buttons">
+    <a href="https://www.facebook.com/profile.php?id=61585555372401" target="_blank" class="float-btn float-fb" data-tooltip="Facebook Messenger">
+      <div class="float-btn-ring"></div>
+      <div class="float-btn-circle">
+        <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+      </div>
+    </a>
+    <a href="https://zalo.me/1913540749972931403" target="_blank" class="float-btn float-zalo" data-tooltip="Liên hệ Zalo">
+      <div class="float-btn-ring"></div>
+      <div class="float-btn-circle">
+        <svg viewBox="0 0 52 52">
+          <path d="M26 12c-7.73 0-14 5.37-14 12 0 3.73 2.01 7.03 5.15 9.07l-.93 3.32c-.15.54.41.98.86.68l4.08-2.67c1.52.41 3.16.6 4.84.6 7.73 0 14-5.37 14-12s-6.27-14-14-14z" fill="#ffffff" />
+          <text x="26" y="28.5" font-family="'Outfit', sans-serif" font-weight="900" font-size="10" fill="#0068ff" text-anchor="middle">Zalo</text>
+        </svg>
+      </div>
+    </a>
+    <a href="tel:1900638074" class="float-btn float-phone" data-tooltip="Hotline: 1900 638 074">
+      <div class="float-btn-ring"></div>
+      <div class="float-btn-circle">
+        <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.56 11.56 0 0 1 8.57 4c0-.55-.45-1-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.58c0-.56-.45-1.04-1-1.04z"/></svg>
+      </div>
+    </a>
+  </div>
+
+  <!-- GALLERY FULLSCREEN LIGHTBOX -->
+  <div class="gallery-lightbox" id="galleryLightbox" onclick="closeGalleryLightbox()">
+    <span class="lightbox-close" onclick="closeGalleryLightbox()">&times;</span>
+    <img id="lightboxImg" src="" alt="Hình ảnh phóng to" onclick="event.stopPropagation()">
+  </div>
+</body>
+
+</html>
