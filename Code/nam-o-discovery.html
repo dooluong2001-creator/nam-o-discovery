@@ -2947,7 +2947,7 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.2rem;
       margin-bottom: 2.5rem;
     }
 
@@ -2956,9 +2956,15 @@
       line-height: 1.6;
       color: var(--text-muted);
       display: grid;
-      grid-template-columns: auto 245px 1fr;
+      grid-template-columns: 20px 240px 1fr;
       gap: 0.8rem;
       align-items: start;
+    }
+
+    .pricing-policy-list li strong {
+      font-weight: 600;
+      color: var(--charcoal);
+      white-space: nowrap;
     }
 
     @media (max-width: 767px) {
@@ -2971,6 +2977,13 @@
         position: absolute;
         left: 0;
         top: 0;
+      }
+      .pricing-policy-list li strong {
+        white-space: normal;
+        display: inline;
+      }
+      .pricing-policy-list li span {
+        display: inline;
       }
     }
 
