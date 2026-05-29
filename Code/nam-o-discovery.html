@@ -5,10 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NAM Ô DISCOVERY – Gotec Land</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <style>
+    @font-face {
+      font-family: 'Beautique';
+      src: url('./fonts/BeautiqueDisplay.woff2') format('woff2'),
+        url('./fonts/BeautiqueDisplay.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
     :root {
       --crimson: #7B1225;
       --crimson-dark: #5A0D1C;
@@ -33,7 +41,7 @@
     }
 
     body {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       background: var(--cream);
       color: var(--charcoal);
       overflow-x: hidden;
@@ -98,7 +106,7 @@
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 4px;
       cursor: pointer;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-weight: 600;
       box-shadow: 0 4px 15px rgba(197, 165, 90, 0.2);
       transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
@@ -111,12 +119,10 @@
       left: -100%;
       width: 50%;
       height: 100%;
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.3) 50%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      background: linear-gradient(90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.3) 50%,
+          rgba(255, 255, 255, 0) 100%);
       transform: skewX(-25deg);
       transition: none;
     }
@@ -159,14 +165,19 @@
     }
 
     @keyframes kenBurns {
-      0% { transform: scale(1.04); }
-      100% { transform: scale(1.0); }
+      0% {
+        transform: scale(1.04);
+      }
+
+      100% {
+        transform: scale(1.0);
+      }
     }
 
     .hero-gradient {
       position: absolute;
       inset: 0;
-      background: 
+      background:
         linear-gradient(to top, rgba(10, 5, 3, 0.95) 0%, rgba(10, 5, 3, 0.4) 50%, rgba(10, 5, 3, 0.05) 100%),
         radial-gradient(circle at 20% 80%, rgba(10, 5, 3, 0.88) 0%, transparent 65%);
     }
@@ -201,7 +212,7 @@
     }
 
     .hero-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Beautique', serif;
       font-size: clamp(3rem, 6vw, 5.5rem);
       font-weight: 300;
       line-height: 1.05;
@@ -222,7 +233,7 @@
       font-size: 15px;
       color: rgba(255, 255, 255, 0.7);
       line-height: 1.75;
-      max-width: 560px;
+      max-width: 750px;
       margin-bottom: 2.5rem;
       font-weight: 300;
       opacity: 0;
@@ -248,7 +259,7 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 4px;
       cursor: pointer;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-weight: 500;
       box-shadow: 0 4px 15px rgba(123, 18, 37, 0.15);
       transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
@@ -261,12 +272,10 @@
       left: -100%;
       width: 50%;
       height: 100%;
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.3) 50%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      background: linear-gradient(90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.3) 50%,
+          rgba(255, 255, 255, 0) 100%);
       transform: skewX(-25deg);
       transition: none;
     }
@@ -296,7 +305,7 @@
       padding: 16px 36px;
       border-radius: 4px;
       cursor: pointer;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-weight: 400;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
@@ -309,12 +318,10 @@
       left: -100%;
       width: 50%;
       height: 100%;
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.15) 50%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      background: linear-gradient(90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.15) 50%,
+          rgba(255, 255, 255, 0) 100%);
       transform: skewX(-25deg);
       transition: none;
     }
@@ -345,7 +352,7 @@
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 4px;
       cursor: pointer;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-weight: 600;
       box-shadow: 0 4px 15px rgba(197, 165, 90, 0.2);
       transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
@@ -358,12 +365,10 @@
       left: -100%;
       width: 50%;
       height: 100%;
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.3) 50%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      background: linear-gradient(90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.3) 50%,
+          rgba(255, 255, 255, 0) 100%);
       transform: skewX(-25deg);
       transition: none;
     }
@@ -452,7 +457,7 @@
       background: transparent;
       opacity: 0;
       transform: translateY(20px);
-      transition: 
+      transition:
         opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
         transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
         background-color 0.4s ease;
@@ -468,10 +473,22 @@
       opacity: 1;
       transform: translateY(0);
     }
-    .stats-bar.visible .stat-item:nth-child(1) { transition-delay: 0.1s; }
-    .stats-bar.visible .stat-item:nth-child(2) { transition-delay: 0.2s; }
-    .stats-bar.visible .stat-item:nth-child(3) { transition-delay: 0.3s; }
-    .stats-bar.visible .stat-item:nth-child(4) { transition-delay: 0.4s; }
+
+    .stats-bar.visible .stat-item:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    .stats-bar.visible .stat-item:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    .stats-bar.visible .stat-item:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+
+    .stats-bar.visible .stat-item:nth-child(4) {
+      transition-delay: 0.4s;
+    }
 
     /* Hover effect */
     .stat-item:hover {
@@ -489,6 +506,7 @@
       transform: scaleX(0);
       transition: transform 0.4s ease;
     }
+
     .stat-item:hover::after {
       transform: scaleX(1);
     }
@@ -501,19 +519,22 @@
       margin-bottom: 0.8rem;
       transition: color 0.3s ease;
     }
+
     .stat-item:hover .stat-label {
       color: #fff;
     }
 
     .stat-value {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Beautique', serif;
       font-size: 2.6rem;
       font-weight: 600;
       color: var(--gold-light);
       line-height: 1;
+      letter-spacing: 0.08em;
       transition: transform 0.3s ease, color 0.3s ease;
       display: inline-block;
     }
+
     .stat-item:hover .stat-value {
       transform: scale(1.05);
       color: #fff;
@@ -544,7 +565,7 @@
     }
 
     .section-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Beautique', serif;
       font-size: clamp(2rem, 3.5vw, 3rem);
       font-weight: 400;
       line-height: 1.15;
@@ -642,7 +663,7 @@
       align-items: flex-start;
       opacity: 0;
       transform: translateY(40px);
-      transition: 
+      transition:
         opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
         transform 0.8s cubic-bezier(0.25, 1, 0.5, 1),
         box-shadow 0.4s ease,
@@ -654,12 +675,30 @@
       opacity: 1;
       transform: translateY(0);
     }
-    .amenities.visible .amenity-card:nth-child(1) { transition-delay: 0.1s; }
-    .amenities.visible .amenity-card:nth-child(2) { transition-delay: 0.2s; }
-    .amenities.visible .amenity-card:nth-child(3) { transition-delay: 0.3s; }
-    .amenities.visible .amenity-card:nth-child(4) { transition-delay: 0.4s; }
-    .amenities.visible .amenity-card:nth-child(5) { transition-delay: 0.5s; }
-    .amenities.visible .amenity-card:nth-child(6) { transition-delay: 0.6s; }
+
+    .amenities.visible .amenity-card:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    .amenities.visible .amenity-card:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    .amenities.visible .amenity-card:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+
+    .amenities.visible .amenity-card:nth-child(4) {
+      transition-delay: 0.4s;
+    }
+
+    .amenities.visible .amenity-card:nth-child(5) {
+      transition-delay: 0.5s;
+    }
+
+    .amenities.visible .amenity-card:nth-child(6) {
+      transition-delay: 0.6s;
+    }
 
     /* Elegant hover lift & glow */
     .amenity-card:hover {
@@ -681,6 +720,7 @@
       transform-origin: left;
       transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     }
+
     .amenity-card:hover::after {
       transform: scaleX(1);
     }
@@ -724,48 +764,94 @@
     .amenity-card:hover .icon-pool path {
       animation: waveMotion 1.5s infinite ease-in-out;
     }
+
     .amenity-card:hover .icon-gym path {
       transform-origin: center;
       animation: gymLift 0.8s infinite alternate ease-in-out;
     }
+
     .amenity-card:hover .icon-park path {
       transform-origin: bottom center;
       animation: treeTilt 1.2s infinite alternate ease-in-out;
     }
+
     .amenity-card:hover .icon-market path {
       animation: cartRoll 1s infinite ease-in-out;
     }
+
     .amenity-card:hover .icon-child path {
       animation: childScale 1.5s infinite ease-in-out;
     }
+
     .amenity-card:hover .icon-community path {
       transform-origin: center;
       animation: communityScale 1.5s infinite alternate ease-in-out;
     }
 
     @keyframes waveMotion {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(2px) translateX(1px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(2px) translateX(1px);
+      }
     }
+
     @keyframes gymLift {
-      0% { transform: translateY(0) scaleY(1); }
-      100% { transform: translateY(-4px) scaleY(1.05); }
+      0% {
+        transform: translateY(0) scaleY(1);
+      }
+
+      100% {
+        transform: translateY(-4px) scaleY(1.05);
+      }
     }
+
     @keyframes treeTilt {
-      0% { transform: rotate(-3deg); }
-      100% { transform: rotate(3deg); }
+      0% {
+        transform: rotate(-3deg);
+      }
+
+      100% {
+        transform: rotate(3deg);
+      }
     }
+
     @keyframes cartRoll {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(3px) rotate(3deg); }
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(3px) rotate(3deg);
+      }
     }
+
     @keyframes childScale {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.08); }
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
     }
+
     @keyframes communityScale {
-      0% { transform: scale(0.95); }
-      100% { transform: scale(1.05); }
+      0% {
+        transform: scale(0.95);
+      }
+
+      100% {
+        transform: scale(1.05);
+      }
     }
 
     /* GALLERY */
@@ -875,12 +961,30 @@
       opacity: 1;
       transform: translateY(0);
     }
-    .legal-docs li:nth-child(1) { transition-delay: 0.1s; }
-    .legal-docs li:nth-child(2) { transition-delay: 0.2s; }
-    .legal-docs li:nth-child(3) { transition-delay: 0.3s; }
-    .legal-docs li:nth-child(4) { transition-delay: 0.4s; }
-    .legal-docs li:nth-child(5) { transition-delay: 0.5s; }
-    .legal-docs li:nth-child(6) { transition-delay: 0.6s; }
+
+    .legal-docs li:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    .legal-docs li:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    .legal-docs li:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+
+    .legal-docs li:nth-child(4) {
+      transition-delay: 0.4s;
+    }
+
+    .legal-docs li:nth-child(5) {
+      transition-delay: 0.5s;
+    }
+
+    .legal-docs li:nth-child(6) {
+      transition-delay: 0.6s;
+    }
 
     .legal-docs li:hover {
       background: #fff;
@@ -982,7 +1086,7 @@
     }
 
     .legal-highlight h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Beautique', serif;
       font-size: 2.1rem;
       font-weight: 400;
       margin-bottom: 1.2rem;
@@ -1077,11 +1181,26 @@
       opacity: 1;
       transform: translateY(0);
     }
-    .location-section.visible .location-points li:nth-child(1) { transition-delay: 0.1s; }
-    .location-section.visible .location-points li:nth-child(2) { transition-delay: 0.2s; }
-    .location-section.visible .location-points li:nth-child(3) { transition-delay: 0.3s; }
-    .location-section.visible .location-points li:nth-child(4) { transition-delay: 0.4s; }
-    .location-section.visible .location-points li:nth-child(5) { transition-delay: 0.5s; }
+
+    .location-section.visible .location-points li:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    .location-section.visible .location-points li:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    .location-section.visible .location-points li:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+
+    .location-section.visible .location-points li:nth-child(4) {
+      transition-delay: 0.4s;
+    }
+
+    .location-section.visible .location-points li:nth-child(5) {
+      transition-delay: 0.5s;
+    }
 
     .location-points li:hover {
       background: #fff;
@@ -1109,9 +1228,17 @@
 
     /* Glowing pulse for active highlight bullet */
     @keyframes locPulse {
-      0% { transform: scale(1); opacity: 0.8; }
-      100% { transform: scale(2.2); opacity: 0; }
+      0% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: scale(2.2);
+        opacity: 0;
+      }
     }
+
     .loc-dot::before {
       content: '';
       position: absolute;
@@ -1122,146 +1249,468 @@
       pointer-events: none;
       transition: opacity 0.3s ease;
     }
+
     .location-points li:hover .loc-dot::before {
       opacity: 1;
       animation: locPulse 1.8s infinite ease-out;
     }
 
     /* CONTACT */
+    /* REDESIGNED CONTACT SECTION */
     .contact {
-      background: var(--crimson-dark);
-      text-align: center;
-      padding: 7rem 4rem;
+      background: radial-gradient(circle at 25% 35%, var(--crimson) 0%, #150305 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 8rem 4rem;
     }
 
-    .contact .section-label {
-      justify-content: center;
+    .contact-ambient-glow {
+      position: absolute;
+      top: -10%;
+      right: -10%;
+      width: 450px;
+      height: 450px;
+      background: var(--gold);
+      filter: blur(140px);
+      opacity: 0.08;
+      pointer-events: none;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .contact-container {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      text-align: left;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-info .section-label {
+      justify-content: flex-start;
       color: var(--gold-light);
     }
 
-    .contact .section-label::before {
-      background: var(--gold);
-    }
-
-    .contact .section-title {
+    .contact-info .section-title {
       color: #fff;
-      text-align: center;
-      margin: 0 auto 1rem;
-      max-width: 600px;
+      margin: 1.5rem 0 1rem;
+      font-size: clamp(32px, 3.2vw, 42px);
+      line-height: 1.25;
+      text-wrap: balance;
     }
 
-    .contact-sub {
+    .contact-info .contact-sub {
       font-size: 15px;
-      color: rgba(255, 255, 255, 0.6);
-      margin-bottom: 3rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.75;
+      margin-bottom: 3.5rem;
       font-weight: 300;
+      text-wrap: balance;
+    }
+
+    /* Contact details on the left */
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .contact-detail-item {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-detail-item:hover {
+      transform: translateX(5px);
+    }
+
+    .contact-detail-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(197, 165, 90, 0.08);
+      border: 1px solid rgba(197, 165, 90, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .contact-detail-item:hover .contact-detail-icon {
+      background: var(--gold);
+      color: #0f0709;
+      box-shadow: 0 0 15px rgba(197, 165, 90, 0.3);
+    }
+
+    .contact-detail-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .detail-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, 0.45);
+      font-weight: 500;
+    }
+
+    .detail-val {
+      font-size: 16px;
+      color: #fff;
+      font-weight: 400;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a.detail-val:hover {
+      color: var(--gold-light);
+    }
+
+    /* Glassmorphic Contact Card on the right */
+    .contact-card {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(197, 165, 90, 0.15);
+      border-radius: 16px;
+      padding: 3.5rem 3rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(197, 165, 90, 0.3);
+      box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.7), 0 0 40px rgba(197, 165, 90, 0.05);
     }
 
     .contact-form {
-      max-width: 560px;
-      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+      gap: 1.2rem;
     }
 
-    .contact-form input,
-    .contact-form textarea {
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(197, 165, 90, 0.25);
+    .form-group {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(197, 165, 90, 0.2);
+      border-radius: 8px;
       color: #fff;
-      padding: 14px 18px;
-      font-family: 'Outfit', sans-serif;
+      padding: 22px 16px 8px;
+      font-family: 'Be Vietnam Pro', sans-serif;
       font-size: 14px;
       outline: none;
-      transition: border-color 0.2s;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-      color: rgba(255, 255, 255, 0.3);
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: var(--gold);
-    }
-
-    .contact-form textarea {
-      grid-column: span 2;
-      resize: none;
+    .form-group textarea {
       height: 120px;
+      resize: none;
     }
 
-    .contact-form .btn-gold {
-      grid-column: span 2;
-      background: var(--gold);
+    /* Floating label behavior */
+    .form-group label {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 14px;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      pointer-events: none;
+      font-family: 'Be Vietnam Pro', sans-serif;
+    }
+
+    .form-group textarea ~ label {
+      top: 28px;
+      transform: none;
+    }
+
+    /* When focused or not placeholder shown (has text) */
+    .form-group input:focus ~ label,
+    .form-group input:not(:placeholder-shown) ~ label,
+    .form-group textarea:focus ~ label,
+    .form-group textarea:not(:placeholder-shown) ~ label {
+      top: 10px;
+      font-size: 11px;
+      color: var(--gold-light);
+      transform: translateY(0);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--gold);
+      box-shadow: 0 0 15px rgba(197, 165, 90, 0.15);
+    }
+
+    /* Animated Focus Line */
+    .input-focus-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--gold-light);
+      transform: scaleX(0);
+      transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .form-group input:focus ~ .input-focus-line,
+    .form-group textarea:focus ~ .input-focus-line {
+      transform: scaleX(1);
+    }
+
+    /* Redesigned Premium Button */
+    .contact-card .btn-gold {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      width: 100%;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
       border: none;
-      color: #fff;
-      font-size: 12px;
+      color: #0f0709;
+      font-size: 13px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      padding: 16px;
+      padding: 18px;
+      border-radius: 8px;
       cursor: pointer;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 500;
-      transition: background 0.2s;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(197, 165, 90, 0.2);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      margin-top: 1rem;
     }
 
-    .contact-form .btn-gold:hover {
-      background: var(--gold-light);
+    .contact-card .btn-gold:hover {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+      box-shadow: 0 8px 28px rgba(197, 165, 90, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .contact-card .btn-gold:active {
+      transform: translateY(0);
+    }
+
+    /* Submit Button Shimmer / Shine */
+    .contact-card .btn-gold::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: none;
+    }
+
+    .contact-card .btn-gold:hover::after {
+      left: 100%;
+      transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .btn-arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .contact-card .btn-gold:hover .btn-arrow {
+      transform: translateX(4px);
+    }
+
+    /* Redesigned Success Card */
+    .form-success-card {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1rem 0;
+      animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .form-success-card h3 {
+      font-family: 'Beautique', serif;
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .form-success-card p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* Success checkmark animation */
+    .success-icon-wrap {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(197, 165, 90, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .success-checkmark {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      stroke: var(--gold-light);
+      stroke-width: 3;
+      stroke-miterlimit: 10;
+      box-shadow: inset 0px 0px 0px var(--gold-light);
+      animation: fillCheckmark .4s ease-in-out .4s forwards, scaleCheckmark .3s ease-in-out .9s forwards;
+    }
+
+    .checkmark-circle {
+      stroke-dasharray: 166;
+      stroke-dashoffset: 166;
+      stroke-width: 3;
+      stroke-miterlimit: 10;
+      stroke: var(--gold-light);
+      fill: none;
+      animation: strokeCircle .6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+    }
+
+    .checkmark-check {
+      transform-origin: 50% 50%;
+      stroke-dasharray: 48;
+      stroke-dashoffset: 48;
+      stroke: var(--gold-light);
+      animation: strokeCheck .3s cubic-bezier(0.65, 0, 0.45, 1) .6s forwards;
+    }
+
+    @keyframes strokeCircle {
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes strokeCheck {
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes fillCheckmark {
+      100% {
+        box-shadow: inset 0px 0px 0px 30px rgba(197, 165, 90, 0.1);
+      }
+    }
+
+    @keyframes scaleCheckmark {
+      0%, 100% {
+        transform: none;
+      }
+      50% {
+        transform: scale3d(1.1, 1.1, 1);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* RESPONSIVE LAYOUT FOR CONTACT */
+    @media (max-width: 991px) {
+      .contact {
+        padding: 6rem 2rem;
+      }
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        text-align: center;
+      }
+      .contact-info .section-label {
+        justify-content: center;
+      }
+      .contact-info .section-title {
+        font-size: 32px;
+      }
+      .contact-info .contact-sub {
+        margin-bottom: 2.5rem;
+      }
+      .contact-details {
+        align-items: center;
+      }
+      .contact-detail-item {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+      .contact-card {
+        padding: 2.5rem 2rem;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
     }
 
     /* FOOTER */
     footer {
-      background: #0f0709;
+      background: #0b0507;
+      border-top: 1px solid rgba(197, 165, 90, 0.1);
       padding: 3rem 4rem;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
+      justify-content: center;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer-brand {
-      display: block;
-    }
-
-    .footer-brand img {
-      height: 52px;
-      width: auto;
-      object-fit: contain;
-      display: block;
-    }
-
-    .footer-info {
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.4);
-      line-height: 1.7;
+      width: 100%;
     }
 
     .footer-copy {
-      font-size: 11px;
-      color: rgba(255, 255, 255, 0.3);
-      letter-spacing: 1px;
-    }
-
-    .footer-socials {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .footer-socials a {
       font-size: 12px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.5);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-socials a:hover {
-      color: var(--gold-light);
+      color: rgba(255, 255, 255, 0.35);
+      letter-spacing: 1px;
+      font-weight: 300;
+      text-align: center;
     }
 
     /* LOCATION CONNECTION */
@@ -1271,19 +1720,23 @@
       position: relative;
       overflow: hidden;
     }
+
     .connection-header {
       text-align: center;
       max-width: 800px;
       margin: 0 auto 4.5rem;
     }
+
     .connection-header .section-label {
       justify-content: center;
     }
+
     .connection-header .section-label::before {
       display: none;
     }
+
     .connection-header h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Beautique', serif;
       font-size: clamp(2.2rem, 4vw, 3.2rem);
       font-weight: 400;
       line-height: 1.2;
@@ -1292,18 +1745,21 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
     .connection-header h2 span {
       color: var(--gold);
       font-weight: 600;
       display: block;
       margin-top: 0.3rem;
     }
+
     .connection-header p {
       font-size: 15px;
       line-height: 1.8;
       color: var(--text-muted);
       font-weight: 300;
     }
+
     .connection-grid {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
@@ -1312,16 +1768,17 @@
       max-width: 1300px;
       margin: 0 auto;
     }
+
     .connection-map-container {
       width: 100%;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
       border: 1px solid var(--border-light);
       position: relative;
       z-index: 1;
     }
-    
+
     /* Radar/Scan sweep effect */
     .connection-map-container::after {
       content: '';
@@ -1335,8 +1792,13 @@
     }
 
     @keyframes radarScan {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     .connection-map-container img {
@@ -1346,20 +1808,24 @@
       transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
       filter: brightness(0.95) contrast(1.02);
     }
+
     .connection-map-container:hover img {
       transform: scale(1.04);
       filter: brightness(1.02) contrast(1.05);
     }
+
     .connection-map-container:hover {
       box-shadow: 0 25px 50px rgba(197, 165, 90, 0.12);
       border-color: rgba(197, 165, 90, 0.4);
     }
+
     .connection-info {
       display: flex;
       flex-direction: column;
       position: relative;
       padding-left: 2rem;
     }
+
     .connection-info::before {
       content: '';
       position: absolute;
@@ -1369,6 +1835,7 @@
       width: 2px;
       background: linear-gradient(to bottom, var(--gold) 0%, rgba(197, 165, 90, 0.15) 100%);
     }
+
     .connection-item {
       display: flex;
       flex-direction: column;
@@ -1383,6 +1850,7 @@
       padding-left: 1rem;
       margin-left: -1rem;
     }
+
     .connection-item:last-child {
       padding-bottom: 0;
     }
@@ -1392,11 +1860,26 @@
       opacity: 1;
       transform: translateX(0);
     }
-    .connection-section.visible .connection-item:nth-child(1) { transition-delay: 0.1s; }
-    .connection-section.visible .connection-item:nth-child(2) { transition-delay: 0.2s; }
-    .connection-section.visible .connection-item:nth-child(3) { transition-delay: 0.3s; }
-    .connection-section.visible .connection-item:nth-child(4) { transition-delay: 0.4s; }
-    .connection-section.visible .connection-item:nth-child(5) { transition-delay: 0.5s; }
+
+    .connection-section.visible .connection-item:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    .connection-section.visible .connection-item:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    .connection-section.visible .connection-item:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+
+    .connection-section.visible .connection-item:nth-child(4) {
+      transition-delay: 0.4s;
+    }
+
+    .connection-section.visible .connection-item:nth-child(5) {
+      transition-delay: 0.5s;
+    }
 
     /* Timeline dots */
     .connection-item::before {
@@ -1414,9 +1897,17 @@
     }
 
     @keyframes timelinePulse {
-      0% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(2.2); opacity: 0; }
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(2.2);
+        opacity: 0;
+      }
     }
+
     .connection-item:first-child::after {
       content: '';
       position: absolute;
@@ -1448,12 +1939,14 @@
       font-size: 1.5rem;
       font-weight: 600;
       color: var(--gold);
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Beautique', serif;
       transition: color 0.3s ease;
     }
+
     .connection-item:hover .connection-time {
       color: var(--crimson);
     }
+
     .connection-desc {
       font-size: 14px;
       line-height: 1.6;
@@ -1461,6 +1954,7 @@
       font-weight: 300;
       transition: color 0.3s ease;
     }
+
     .connection-item:hover .connection-desc {
       color: var(--charcoal);
     }
@@ -1508,13 +2002,33 @@
     }
 
     @keyframes ringBreath {
-      0%, 100% { transform: scale(1); opacity: 0.7; }
-      50% { transform: scale(1.08); opacity: 0.4; }
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+
+      50% {
+        transform: scale(1.08);
+        opacity: 0.4;
+      }
     }
 
-    .float-fb .float-btn-ring { background: rgba(24, 119, 242, 0.25); animation-delay: 0s; }
-    .float-zalo .float-btn-ring { background: rgba(0, 104, 255, 0.25); animation-delay: 0.5s; }
-    .float-phone .float-btn-ring { background: rgba(0, 168, 84, 0.25); animation-delay: 1s; }
+    .float-fb .float-btn-ring {
+      background: rgba(24, 119, 242, 0.25);
+      animation-delay: 0s;
+    }
+
+    .float-zalo .float-btn-ring {
+      background: rgba(0, 104, 255, 0.25);
+      animation-delay: 0.5s;
+    }
+
+    .float-phone .float-btn-ring {
+      background: rgba(0, 168, 84, 0.25);
+      animation-delay: 1s;
+    }
 
     /* Inner Solid Circle */
     .float-btn-circle {
@@ -1530,9 +2044,17 @@
       transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
     }
 
-    .float-fb .float-btn-circle { background: #1877F2; }
-    .float-zalo .float-btn-circle { background: #0068FF; }
-    .float-phone .float-btn-circle { background: #00A854; }
+    .float-fb .float-btn-circle {
+      background: #1877F2;
+    }
+
+    .float-zalo .float-btn-circle {
+      background: #0068FF;
+    }
+
+    .float-phone .float-btn-circle {
+      background: #00A854;
+    }
 
     .float-btn-circle svg {
       width: 20px;
@@ -1542,28 +2064,76 @@
       animation: iconWiggle 6s infinite ease-in-out;
     }
 
-    .float-fb svg { animation-delay: 0s; }
-    .float-zalo svg { animation-delay: 2s; }
-    .float-phone svg { animation-delay: 4s; }
+    .float-fb svg {
+      width: 24px;
+      height: 24px;
+      animation-delay: 0s;
+    }
+
+    .float-fb svg .fb-bg {
+      fill: #ffffff !important;
+    }
+
+    .float-fb svg .fb-txt {
+      fill: #1877F2 !important;
+    }
+
+    .float-zalo svg {
+      width: 26px;
+      height: 26px;
+      animation-delay: 2s;
+    }
+
+    .float-zalo svg .zalo-bg {
+      fill: #ffffff !important;
+    }
+
+    .float-zalo svg .zalo-txt {
+      fill: #0068FF !important;
+    }
+
+    .float-phone svg {
+      animation-delay: 4s;
+    }
 
     @keyframes iconWiggle {
-      0%, 90%, 100% { transform: rotate(0deg); }
-      92% { transform: rotate(-15deg); }
-      94% { transform: rotate(12deg); }
-      96% { transform: rotate(-10deg); }
-      98% { transform: rotate(8deg); }
+
+      0%,
+      90%,
+      100% {
+        transform: rotate(0deg);
+      }
+
+      92% {
+        transform: rotate(-15deg);
+      }
+
+      94% {
+        transform: rotate(12deg);
+      }
+
+      96% {
+        transform: rotate(-10deg);
+      }
+
+      98% {
+        transform: rotate(8deg);
+      }
     }
 
     .float-btn:hover {
       transform: scale(1.05) translateX(4px);
     }
+
     .float-btn:hover .float-btn-ring {
       transform: scale(1.15);
       opacity: 0.8;
     }
+
     .float-btn:hover .float-btn-circle {
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
     }
+
     .float-btn:hover svg {
       transform: scale(1.1) rotate(15deg);
       animation-play-state: paused;
@@ -1580,12 +2150,25 @@
       z-index: 0;
       pointer-events: none;
     }
-    .float-phone::before { animation: sonarRipple 2s infinite ease-out; }
-    .float-phone::after { animation: sonarRipple 2s infinite ease-out 1s; }
+
+    .float-phone::before {
+      animation: sonarRipple 2s infinite ease-out;
+    }
+
+    .float-phone::after {
+      animation: sonarRipple 2s infinite ease-out 1s;
+    }
 
     @keyframes sonarRipple {
-      0% { transform: scale(1); opacity: 0.8; }
-      100% { transform: scale(1.6); opacity: 0; }
+      0% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: scale(1.6);
+        opacity: 0;
+      }
     }
 
     .float-btn::after {
@@ -1602,11 +2185,12 @@
       visibility: hidden;
       transform: translateX(-10px);
       transition: all 0.3s ease;
-      font-family: 'Outfit', sans-serif;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-family: 'Be Vietnam Pro', sans-serif;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       pointer-events: none;
       z-index: 999;
     }
+
     .float-btn:hover::after {
       opacity: 1;
       visibility: visible;
@@ -1619,7 +2203,7 @@
       padding: 7rem 4rem;
       border-bottom: 1px solid var(--border-light);
     }
-    
+
     .gallery-categories {
       display: flex;
       justify-content: center;
@@ -1627,7 +2211,7 @@
       margin-bottom: 3rem;
       flex-wrap: wrap;
     }
-    
+
     .category-btn {
       background: rgba(255, 255, 255, 0.6);
       border: 1px solid var(--border-light);
@@ -1640,17 +2224,18 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
     }
-    
-    .category-btn:hover, .category-btn.active {
+
+    .category-btn:hover,
+    .category-btn.active {
       background: var(--crimson-dark);
       color: #fff;
       border-color: var(--crimson-dark);
       box-shadow: 0 4px 15px rgba(90, 13, 28, 0.2);
       transform: translateY(-2px);
     }
-    
+
     .gallery-display-grid {
       display: grid;
       grid-template-columns: 320px 1fr;
@@ -1659,7 +2244,7 @@
       margin: 0 auto;
       align-items: stretch;
     }
-    
+
     .gallery-sidebar {
       background: rgba(255, 255, 255, 0.45);
       border: 1px solid var(--border-light);
@@ -1669,14 +2254,14 @@
       flex-direction: column;
       gap: 1rem;
     }
-    
+
     .gallery-list {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
     }
-    
+
     .gallery-list-item {
       padding: 1.1rem 1.4rem;
       border-radius: 8px;
@@ -1692,39 +2277,41 @@
       align-items: center;
       gap: 0.8rem;
     }
-    
+
     .gallery-list-item::before {
       content: '✦';
       color: var(--gold);
       font-size: 10px;
       transition: transform 0.3s ease;
     }
-    
-    .gallery-list-item:hover, .gallery-list-item.active {
+
+    .gallery-list-item:hover,
+    .gallery-list-item.active {
       background: var(--crimson);
       color: #fff;
       border-color: var(--crimson);
       transform: translateX(6px);
       box-shadow: 0 4px 12px rgba(123, 18, 37, 0.15);
     }
-    
-    .gallery-list-item:hover::before, .gallery-list-item.active::before {
+
+    .gallery-list-item:hover::before,
+    .gallery-list-item.active::before {
       color: var(--gold-light);
       transform: rotate(45deg) scale(1.2);
     }
-    
+
     .gallery-viewer-box {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
-    
+
     .gallery-screen {
       position: relative;
       width: 100%;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
       border: 1px solid var(--border-light);
       background: #fafafa;
       padding: 1rem;
@@ -1733,7 +2320,7 @@
       align-items: center;
       justify-content: center;
     }
-    
+
     .gallery-screen img {
       max-width: 100%;
       max-height: 100%;
@@ -1742,11 +2329,11 @@
       transition: opacity 0.3s ease, transform 0.5s ease;
       cursor: zoom-in;
     }
-    
+
     .gallery-screen img:hover {
       transform: scale(1.015);
     }
-    
+
     .gallery-nav-arrow {
       position: absolute;
       top: 50%;
@@ -1763,26 +2350,31 @@
       cursor: pointer;
       z-index: 5;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
-    
+
     .gallery-nav-arrow:hover {
       background: var(--crimson);
       color: #fff;
       border-color: var(--crimson);
       box-shadow: 0 5px 15px rgba(123, 18, 37, 0.25);
     }
-    
-    .gallery-nav-arrow.arrow-left { left: 20px; }
-    .gallery-nav-arrow.arrow-right { right: 20px; }
-    
+
+    .gallery-nav-arrow.arrow-left {
+      left: 20px;
+    }
+
+    .gallery-nav-arrow.arrow-right {
+      right: 20px;
+    }
+
     .gallery-zoom-trigger {
       position: absolute;
       bottom: 20px;
       right: 20px;
       width: 40px;
       height: 40px;
-      background: rgba(255,255,255,0.9);
+      background: rgba(255, 255, 255, 0.9);
       border: 1px solid var(--border-light);
       border-radius: 50%;
       display: flex;
@@ -1792,16 +2384,16 @@
       z-index: 5;
       font-size: 14px;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
-    
+
     .gallery-zoom-trigger:hover {
       background: var(--gold);
       color: #fff;
       border-color: var(--gold);
       transform: scale(1.1);
     }
-    
+
     .gallery-thumbnails {
       display: flex;
       gap: 12px;
@@ -1810,16 +2402,16 @@
       scrollbar-width: thin;
       scrollbar-color: rgba(197, 165, 90, 0.3) transparent;
     }
-    
+
     .gallery-thumbnails::-webkit-scrollbar {
       height: 5px;
     }
-    
+
     .gallery-thumbnails::-webkit-scrollbar-thumb {
       background: rgba(197, 165, 90, 0.3);
       border-radius: 4px;
     }
-    
+
     .gallery-thumb-item {
       flex: 0 0 120px;
       aspect-ratio: 16/10;
@@ -1830,21 +2422,22 @@
       opacity: 0.6;
       transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     }
-    
+
     .gallery-thumb-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-    
-    .gallery-thumb-item:hover, .gallery-thumb-item.active {
+
+    .gallery-thumb-item:hover,
+    .gallery-thumb-item.active {
       opacity: 1;
       border-color: var(--crimson);
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(123, 18, 37, 0.1);
     }
-    
+
     /* LIGHTBOX OVERLAY */
     .gallery-lightbox {
       position: fixed;
@@ -1859,67 +2452,78 @@
       transition: opacity 0.3s ease;
       backdrop-filter: blur(10px);
     }
-    
+
     .gallery-lightbox.active {
       display: flex;
       opacity: 1;
     }
-    
+
     .gallery-lightbox img {
       max-width: 95%;
       max-height: 90vh;
       object-fit: contain;
       border-radius: 8px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
       transform: scale(0.95);
       transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     }
-    
+
     .gallery-lightbox.active img {
       transform: scale(1);
     }
-    
+
     .lightbox-close {
       position: absolute;
       top: 30px;
       right: 30px;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255, 255, 255, 0.7);
       font-size: 40px;
       font-weight: 300;
       cursor: pointer;
       transition: color 0.2s;
     }
-    
+
     .lightbox-close:hover {
       color: #fff;
     }
-    
+
     @media (max-width: 900px) {
       .gallery-display-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
+
       .gallery-sidebar {
         padding: 1rem;
       }
+
       .gallery-list {
         flex-direction: row;
         flex-wrap: wrap;
       }
+
       .gallery-list-item {
         flex: 1 1 calc(50% - 0.5rem);
       }
     }
+
     @media (max-width: 600px) {
       .gallery-list-item {
         flex: 1 1 100%;
       }
+
       .gallery-nav-arrow {
         width: 36px;
         height: 36px;
       }
-      .gallery-nav-arrow.arrow-left { left: 10px; }
-      .gallery-nav-arrow.arrow-right { right: 10px; }
+
+      .gallery-nav-arrow.arrow-left {
+        left: 10px;
+      }
+
+      .gallery-nav-arrow.arrow-right {
+        right: 10px;
+      }
     }
 
     /* TYPICAL FLOOR PLANS SECTION */
@@ -1994,7 +2598,7 @@
       cursor: pointer;
       z-index: 5;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
     .floor-nav-arrow:hover {
@@ -2004,8 +2608,13 @@
       box-shadow: 0 6px 18px rgba(123, 18, 37, 0.3);
     }
 
-    .arrow-left { left: 20px; }
-    .arrow-right { right: 20px; }
+    .arrow-left {
+      left: 20px;
+    }
+
+    .arrow-right {
+      right: 20px;
+    }
 
     /* Pagination Dots */
     .floor-dots {
@@ -2031,11 +2640,26 @@
     }
 
     @media (max-width: 900px) {
-      .typical-floor-section { padding: 4rem 1.5rem; }
-      .floor-slider-container { padding: 2rem 1rem 1.5rem; }
-      .floor-nav-arrow { width: 38px; height: 38px; }
-      .arrow-left { left: 5px; }
-      .arrow-right { right: 5px; }
+      .typical-floor-section {
+        padding: 4rem 1.5rem;
+      }
+
+      .floor-slider-container {
+        padding: 2rem 1rem 1.5rem;
+      }
+
+      .floor-nav-arrow {
+        width: 38px;
+        height: 38px;
+      }
+
+      .arrow-left {
+        left: 5px;
+      }
+
+      .arrow-right {
+        right: 5px;
+      }
     }
 
     /* SHOWROOM / MẪU CĂN HỘ */
@@ -2043,6 +2667,7 @@
       background: var(--cream);
       padding: 7rem 4rem;
     }
+
     .showroom-grid {
       display: grid;
       grid-template-columns: 280px 1fr;
@@ -2051,11 +2676,13 @@
       margin: 0 auto;
       align-items: start;
     }
+
     .showroom-tabs {
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
     }
+
     .showroom-tab {
       background: rgba(255, 255, 255, 0.4);
       border: 1px solid var(--border-light);
@@ -2070,15 +2697,19 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    .showroom-tab:hover, .showroom-tab.active {
+
+    .showroom-tab:hover,
+    .showroom-tab.active {
       background: var(--crimson-dark);
       color: #fff;
       border-color: var(--crimson-dark);
       transform: translateX(5px);
     }
+
     .showroom-content {
       transition: opacity 0.2s ease-in-out;
     }
+
     .showroom-detail-grid {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
@@ -2086,30 +2717,35 @@
       background: #fff;
       padding: 2rem;
       border-radius: 8px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
       border: 1px solid var(--border-light);
     }
+
     .showroom-images-col {
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
+
     .showroom-main-img {
       border-radius: 6px;
       overflow: hidden;
       aspect-ratio: 16/10;
     }
+
     .showroom-main-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
+
     .showroom-thumb-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
+
     .showroom-thumb-grid img {
       width: 100%;
       height: 100%;
@@ -2117,11 +2753,13 @@
       border-radius: 6px;
       aspect-ratio: 4/3;
     }
+
     .showroom-info-col {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
+
     .room-tag {
       font-size: 11px;
       font-weight: 600;
@@ -2130,13 +2768,15 @@
       letter-spacing: 2px;
       margin-bottom: 0.8rem;
     }
+
     .showroom-info-col h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Beautique', serif;
       font-size: 2.2rem;
       font-weight: 400;
       color: var(--charcoal);
       margin-bottom: 0.5rem;
     }
+
     .room-sub {
       font-size: 13px;
       font-weight: 500;
@@ -2144,11 +2784,13 @@
       margin-bottom: 1.5rem;
       font-style: italic;
     }
+
     .room-divider {
       height: 1px;
       background: var(--border-light);
       margin-bottom: 1.5rem;
     }
+
     .showroom-info-col p {
       font-size: 14px;
       line-height: 1.7;
@@ -2156,6 +2798,7 @@
       margin-bottom: 1.5rem;
       font-weight: 300;
     }
+
     .room-specs {
       list-style: none;
       display: flex;
@@ -2163,6 +2806,7 @@
       gap: 0.6rem;
       margin-bottom: 1.5rem;
     }
+
     .room-specs li {
       font-size: 13.5px;
       color: var(--charcoal);
@@ -2170,6 +2814,7 @@
       align-items: center;
       gap: 0.5rem;
     }
+
     .room-specs li::before {
       content: '✦';
       color: var(--gold);
@@ -2181,6 +2826,7 @@
       background: var(--off-white);
       padding: 7rem 4rem;
     }
+
     .pricing-grid {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
@@ -2189,18 +2835,21 @@
       margin: 0 auto;
       align-items: center;
     }
+
     .pricing-visual {
       position: relative;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
       aspect-ratio: 4/5;
     }
+
     .pricing-visual img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     .pricing-visual-overlay {
       position: absolute;
       inset: 0;
@@ -2209,24 +2858,28 @@
       align-items: flex-end;
       padding: 3rem;
     }
+
     .pricing-visual-overlay h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Beautique', serif;
       font-size: 2.5rem;
       font-weight: 300;
       color: #fff;
       line-height: 1.2;
       letter-spacing: 1px;
     }
+
     .pricing-visual-overlay h3 em {
       color: var(--gold-light);
       font-style: italic;
       font-weight: 400;
       display: block;
     }
+
     .pricing-content {
       display: flex;
       flex-direction: column;
     }
+
     .pricing-badge-row {
       display: flex;
       align-items: center;
@@ -2238,21 +2891,24 @@
       box-shadow: 0 10px 25px rgba(90, 13, 28, 0.15);
       border: 1px solid rgba(197, 165, 90, 0.2);
     }
+
     .badge-label {
       font-size: 11px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255, 255, 255, 0.7);
       font-weight: 500;
     }
+
     .badge-price {
       font-size: 2.2rem;
       font-weight: 700;
       color: var(--gold-light);
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
     }
+
     .pricing-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Beautique', serif;
       font-size: 1.8rem;
       font-weight: 600;
       color: var(--charcoal);
@@ -2260,6 +2916,7 @@
       border-left: 3px solid var(--crimson);
       padding-left: 1rem;
     }
+
     .pricing-policy-list {
       list-style: none;
       display: flex;
@@ -2267,6 +2924,7 @@
       gap: 1rem;
       margin-bottom: 2.5rem;
     }
+
     .pricing-policy-list li {
       font-size: 14px;
       line-height: 1.6;
@@ -2275,19 +2933,22 @@
       align-items: flex-start;
       gap: 0.8rem;
     }
+
     .pricing-policy-list li::before {
       content: '✓';
       color: var(--crimson);
       font-weight: bold;
       margin-top: 2px;
     }
+
     .pricing-form-box {
       background: #fff;
       padding: 2rem;
       border-radius: 8px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
       border: 1px solid var(--border-light);
     }
+
     .pricing-form-box h4 {
       font-size: 14px;
       font-weight: 600;
@@ -2296,26 +2957,30 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
     .pform {
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
+
     .pform-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
+
     .pform input {
-      background: rgba(0,0,0,0.02);
+      background: rgba(0, 0, 0, 0.02);
       border: 1px solid var(--border-light);
       color: var(--charcoal);
       padding: 12px 16px;
       font-size: 13.5px;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       outline: none;
       transition: all 0.3s ease;
     }
+
     .pform input:focus {
       border-color: var(--crimson);
       background: #fff;
@@ -2358,12 +3023,14 @@
         gap: 2.5rem;
       }
 
-      .plan-tabs, .showroom-tabs {
+      .plan-tabs,
+      .showroom-tabs {
         flex-direction: row;
         flex-wrap: wrap;
       }
 
-      .plan-tab, .showroom-tab {
+      .plan-tab,
+      .showroom-tab {
         flex: 1 1 calc(50% - 0.5rem);
         text-align: center;
       }
@@ -2399,8 +3066,19 @@
         height: 16px;
       }
 
+      .float-fb svg {
+        width: 19px;
+        height: 19px;
+      }
+
+      .float-zalo svg {
+        width: 21px;
+        height: 21px;
+      }
+
       .float-btn::after {
-        display: none; /* Hide tooltips on mobile screen */
+        display: none;
+        /* Hide tooltips on mobile screen */
       }
 
       .amenity-grid {
@@ -2411,10 +3089,13 @@
       .stats-bar {
         grid-template-columns: 1fr 1fr;
       }
+
       .stat-item:nth-child(2n) {
         border-right: none;
       }
-      .stat-item:nth-child(1), .stat-item:nth-child(2) {
+
+      .stat-item:nth-child(1),
+      .stat-item:nth-child(2) {
         border-bottom: 1px solid rgba(197, 165, 90, 0.2);
       }
 
@@ -2426,34 +3107,26 @@
         display: none;
       }
 
-      .contact-form {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-form textarea,
-      .contact-form .btn-gold {
-        grid-column: span 1;
-      }
-
       footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 2rem 1.5rem;
+        padding: 2.5rem 1.5rem;
       }
     }
-    
+
     @media (max-width: 600px) {
       .amenity-grid {
         grid-template-columns: 1fr;
         gap: 16px;
       }
+
       .stats-bar {
         grid-template-columns: 1fr;
       }
+
       .stat-item {
         border-right: none;
         border-bottom: 1px solid rgba(197, 165, 90, 0.2);
       }
+
       .stat-item:last-child {
         border-bottom: none;
       }
@@ -2487,8 +3160,7 @@
     <div class="hero-content">
       <div class="hero-label">NHÀ Ở · ĐÀ NẴNG</div>
       <h1 class="hero-title">Nam Ô<br><em>Discovery</em></h1>
-      <p class="hero-sub">Ôm trọn vịnh biển Đà Nẵng xanh bất tận, dãy núi hùng vĩ và dòng Cu Đê thơ mộng. Một bước chân
-        chạm đến đại dương.</p>
+      <p class="hero-sub">Ôm trọn vịnh biển Đà Nẵng xanh bất tận, dãy núi hùng vĩ và dòng Cu Đê thơ mộng.<br>Một bước chân chạm đến đại dương.</p>
       <div class="hero-actions">
         <button class="btn-primary"
           onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận báo giá</button>
@@ -2554,79 +3226,89 @@
     <div class="amenities-header">
       <div class="section-label">Tiện ích nội khu</div>
       <h2 class="section-title">Cuộc sống tiện nghi toàn diện</h2>
-      <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7; font-weight:300;">Hệ thống tiện ích đẳng cấp được thiết kế để phục vụ mọi nhu cầu của cư dân, từ thư giãn đến vận động và kết nối cộng đồng.</p>
+      <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7; font-weight:300;">Hệ thống tiện ích đẳng
+        cấp được thiết kế để phục vụ mọi nhu cầu của cư dân, từ thư giãn đến vận động và kết nối cộng đồng.</p>
     </div>
     <div class="amenity-grid">
       <div class="amenity-card">
         <div class="amenity-icon">
           <!-- Pool outline SVG -->
-          <svg class="icon-pool" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 6c.6.5 1.2 1 2.5 1C5.8 7 7 6 7 6s1.2-1 2.5-1c1.3 0 2.5 1 2.5 1s1.2 1 2.5 1c1.3 0 2.5-1 2.5-1"/>
-            <path d="M2 12c.6.5 1.2 1 2.5 1c1.3 0 2.5-1 2.5-1s1.2-1 2.5-1c1.3 0 2.5 1 2.5 1s1.2 1 2.5 1c1.3 0 2.5-1 2.5-1"/>
-            <path d="M2 18c.6.5 1.2 1 2.5 1c1.3 0 2.5-1 2.5-1s1.2-1 2.5-1c1.3 0 2.5 1 2.5 1s1.2 1 2.5 1c1.3 0 2.5-1 2.5-1"/>
+          <svg class="icon-pool" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 6c.6.5 1.2 1 2.5 1C5.8 7 7 6 7 6s1.2-1 2.5-1c1.3 0 2.5 1 2.5 1s1.2 1 2.5 1c1.3 0 2.5-1 2.5-1" />
+            <path
+              d="M2 12c.6.5 1.2 1 2.5 1c1.3 0 2.5-1 2.5-1s1.2-1 2.5-1c1.3 0 2.5 1 2.5 1s1.2 1 2.5 1c1.3 0 2.5-1 2.5-1" />
+            <path
+              d="M2 18c.6.5 1.2 1 2.5 1c1.3 0 2.5-1 2.5-1s1.2-1 2.5-1c1.3 0 2.5 1 2.5 1s1.2 1 2.5 1c1.3 0 2.5-1 2.5-1" />
           </svg>
         </div>
         <div class="amenity-name">Hồ bơi</div>
         <div class="amenity-desc">Hồ bơi vô cực tầm nhìn hướng biển, không gian thư giãn sang trọng.</div>
       </div>
-      
+
       <div class="amenity-card">
         <div class="amenity-icon">
           <!-- Gym outline SVG -->
-          <svg class="icon-gym" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6.5 6.5h11M6.5 17.5h11M18 5v14M6 5v14M3 8v8M21 8v8"/>
+          <svg class="icon-gym" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6.5 6.5h11M6.5 17.5h11M18 5v14M6 5v14M3 8v8M21 8v8" />
           </svg>
         </div>
         <div class="amenity-name">Phòng Gym</div>
         <div class="amenity-desc">Trang thiết bị hiện đại, không gian tập luyện chuyên nghiệp đẳng cấp 5 sao.</div>
       </div>
-      
+
       <div class="amenity-card">
         <div class="amenity-icon">
           <!-- Tree/Park outline SVG -->
-          <svg class="icon-park" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22v-8M17 14c2.8 0 5-2.2 5-5s-2.2-5-5-5c-.4 0-.8.1-1.2.2C15 2.1 12.8 1 10.5 1 6.9 1 4 3.9 4 7.5c0 .4.1.8.2 1.2C2.1 9.4 1 11.6 1 14c0 2.8 2.2 5 5 5h11z"/>
+          <svg class="icon-park" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M12 22v-8M17 14c2.8 0 5-2.2 5-5s-2.2-5-5-5c-.4 0-.8.1-1.2.2C15 2.1 12.8 1 10.5 1 6.9 1 4 3.9 4 7.5c0 .4.1.8.2 1.2C2.1 9.4 1 11.6 1 14c0 2.8 2.2 5 5 5h11z" />
           </svg>
         </div>
         <div class="amenity-name">Công viên xanh</div>
         <div class="amenity-desc">Không gian xanh rộng lớn, vườn cảnh quan thiết kế nghệ thuật độc đáo.</div>
       </div>
-      
+
       <div class="amenity-card">
         <div class="amenity-icon">
           <!-- Market outline SVG -->
-          <svg class="icon-market" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="9" cy="21" r="1"/>
-            <circle cx="20" cy="21" r="1"/>
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          <svg class="icon-market" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
           </svg>
         </div>
         <div class="amenity-name">Siêu thị</div>
         <div class="amenity-desc">Trung tâm thương mại ngay tại tầng đế, đáp ứng mọi nhu cầu mua sắm.</div>
       </div>
-      
+
       <div class="amenity-card">
         <div class="amenity-icon">
           <!-- Child smile outline SVG -->
-          <svg class="icon-child" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-            <line x1="9" y1="9" x2="9.01" y2="9"/>
-            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          <svg class="icon-child" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+            <line x1="9" y1="9" x2="9.01" y2="9" />
+            <line x1="15" y1="9" x2="15.01" y2="9" />
           </svg>
         </div>
         <div class="amenity-name">Nhà trẻ</div>
         <div class="amenity-desc">Cơ sở giáo dục mầm non chất lượng cao ngay trong khuôn viên dự án.</div>
       </div>
-      
+
       <div class="amenity-card">
         <div class="amenity-icon">
           <!-- Community outline SVG -->
-          <svg class="icon-community" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          <svg class="icon-community" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
           </svg>
         </div>
         <div class="amenity-name">Cộng đồng</div>
@@ -2640,9 +3322,10 @@
     <div class="connection-header">
       <div class="section-label">Trung tâm trải nghiệm thực tế</div>
       <h2>Mặt Bằng Thiết Kế &amp; <span>Phối Cảnh 3D Chi Tiết</span></h2>
-      <p>Khám phá bản đồ chi tiết, sơ đồ thiết kế mặt bằng tổng thể 2 tòa tháp cùng những góc phối cảnh 3D tiện ích và kiến trúc tinh xảo của Nam Ô Discovery.</p>
+      <p>Khám phá bản đồ chi tiết, sơ đồ thiết kế mặt bằng tổng thể 2 tòa tháp cùng những góc phối cảnh 3D tiện ích và
+        kiến trúc tinh xảo của Nam Ô Discovery.</p>
     </div>
-    
+
     <div class="gallery-categories">
       <button class="category-btn active" onclick="switchGalleryCategory('layouts')">Mặt Bằng &amp; Sơ Đồ</button>
       <button class="category-btn" onclick="switchGalleryCategory('amenities')">Tiện Ích 3D</button>
@@ -2658,8 +3341,10 @@
       <div class="gallery-viewer-box">
         <div class="gallery-screen">
           <button class="gallery-nav-arrow arrow-left" onclick="prevGalleryImage()" aria-label="Slide trước">❮</button>
-          <img id="galleryActiveImg" src="../Image/241205_BV-TONG1FINAL_10K_rz.webp" alt="Hình ảnh trực quan Nam Ô Discovery">
-          <button class="gallery-nav-arrow arrow-right" onclick="nextGalleryImage()" aria-label="Slide tiếp theo">❯</button>
+          <img id="galleryActiveImg" src="../Image/241205_BV-TONG1FINAL_10K_rz.webp"
+            alt="Hình ảnh trực quan Nam Ô Discovery">
+          <button class="gallery-nav-arrow arrow-right" onclick="nextGalleryImage()"
+            aria-label="Slide tiếp theo">❯</button>
           <button class="gallery-zoom-trigger" onclick="openGalleryLightbox()" aria-label="Phóng to ảnh">🔍</button>
         </div>
         <div class="gallery-thumbnails" id="galleryThumbnails">
@@ -2674,7 +3359,8 @@
     <div class="connection-header">
       <div class="section-label">Sơ đồ mặt bằng</div>
       <h2>Mặt Bằng Tầng Điển Hình <span>Nam Ô Discovery</span></h2>
-      <p>Bố cục mặt bằng các tầng được phân bổ khoa học, tối ưu hóa công năng sử dụng với hành lang rộng thoáng, sảnh thang máy biệt lập và các khu vực lánh nạn an toàn đạt chuẩn quốc tế.</p>
+      <p>Bố cục mặt bằng các tầng được phân bổ khoa học, tối ưu hóa công năng sử dụng với hành lang rộng thoáng, sảnh
+        thang máy biệt lập và các khu vực lánh nạn an toàn đạt chuẩn quốc tế.</p>
     </div>
 
     <div class="floor-slider-container">
@@ -2682,7 +3368,8 @@
       <div class="floor-viewer">
         <button class="floor-nav-arrow arrow-left" onclick="prevFloor()" aria-label="Slide trước">❮</button>
         <div class="floor-img-wrap">
-          <img id="floorPlanImg" src="../Image/nam_o_discovery_floor_5_21.png" alt="Mặt bằng Tầng điển hình Nam Ô Discovery">
+          <img id="floorPlanImg" src="../Image/nam_o_discovery_floor_5_21.png"
+            alt="Mặt bằng Tầng điển hình Nam Ô Discovery">
         </div>
         <button class="floor-nav-arrow arrow-right" onclick="nextFloor()" aria-label="Slide tiếp theo">❯</button>
       </div>
@@ -2702,16 +3389,17 @@
     <div class="connection-header">
       <div class="section-label">Mẫu căn hộ</div>
       <h2>Thiết Kế Căn Hộ <span>Không Gian Sống Thông Minh &amp; Sang Trọng</span></h2>
-      <p>Mỗi căn hộ tại Nam Ô Discovery đều được thiết kế tối ưu diện tích, với hơn 99% căn hộ sở hữu ban công kính ôm trọn vịnh biển Đà Nẵng, đón nắng gió tự nhiên trong lành.</p>
+      <p>Mỗi căn hộ tại Nam Ô Discovery đều được thiết kế tối ưu diện tích, với hơn 99% căn hộ sở hữu ban công kính ôm
+        trọn vịnh biển Đà Nẵng, đón nắng gió tự nhiên trong lành.</p>
     </div>
-    
+
     <div class="showroom-grid">
       <div class="showroom-tabs">
         <button class="showroom-tab active" onclick="switchShowroom(this, '1pn')">Căn hộ 1 phòng ngủ</button>
         <button class="showroom-tab" onclick="switchShowroom(this, '2pn')">Căn hộ 2 phòng ngủ</button>
         <button class="showroom-tab" onclick="switchShowroom(this, '3pn')">Căn hộ 3 phòng ngủ</button>
       </div>
-      
+
       <div class="showroom-content" id="showroomContent">
         <div class="showroom-detail-grid">
           <div class="showroom-images-col">
@@ -2728,13 +3416,17 @@
             <h3>Căn Hộ 1 Phòng Ngủ</h3>
             <span class="room-sub">Thiết kế thông minh, tối ưu công năng và tính linh hoạt</span>
             <div class="room-divider"></div>
-            <p>Phù hợp với khách hàng độc thân, các cặp vợ chồng trẻ hoặc nhà đầu tư khai thác homestay/khách sạn. Phòng khách rộng rãi kết nối liền mạch với ban công kính tràn viền hướng biển, mang đại dương vào phòng ngủ của bạn.</p>
+            <p>Phù hợp với khách hàng độc thân, các cặp vợ chồng trẻ hoặc nhà đầu tư khai thác homestay/khách sạn. Phòng
+              khách rộng rãi kết nối liền mạch với ban công kính tràn viền hướng biển, mang đại dương vào phòng ngủ của
+              bạn.</p>
             <ul class="room-specs">
               <li><strong>Ban công:</strong> Hướng biển trực diện</li>
               <li><strong>Phòng khách:</strong> Thiết kế mở rộng rãi</li>
               <li><strong>Bàn giao:</strong> Hoàn thiện nội thất 5 sao (Tháp A)</li>
             </ul>
-            <button class="btn-primary" style="margin-top: 1.5rem;" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận Báo Giá Căn 1PN</button>
+            <button class="btn-primary" style="margin-top: 1.5rem;"
+              onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận Báo Giá Căn
+              1PN</button>
           </div>
         </div>
       </div>
@@ -2750,23 +3442,25 @@
           <h3>KẾT NỐI <em>ĐẲNG CẤP</em></h3>
         </div>
       </div>
-      
+
       <div class="pricing-content">
         <div class="pricing-badge-row">
           <span class="badge-label">Giá Bán Dự Kiến Chỉ Từ</span>
           <span class="badge-price">58 TR/M²</span>
         </div>
-        
+
         <h3 class="pricing-title">Chính Sách Ưu Đãi Đặc Biệt Đợt 1</h3>
-        
+
         <ul class="pricing-policy-list">
           <li><strong>Booking ưu tiên:</strong> Chỉ 50 triệu/căn (hoàn tiền 100% nếu không mua).</li>
           <li><strong>Chiết khấu thanh toán sớm:</strong> Nhận chiết khấu lên đến 12% giá trị căn hộ.</li>
-          <li><strong>Hỗ trợ tài chính cực tốt:</strong> Hỗ trợ vay ngân hàng 70%, ân hạn nợ gốc và lãi suất 0% trong 18 tháng.</li>
+          <li><strong>Hỗ trợ tài chính cực tốt:</strong> Hỗ trợ vay ngân hàng 70%, ân hạn nợ gốc và lãi suất 0% trong 18
+            tháng.</li>
           <li><strong>Tiến độ thanh toán thư thả:</strong> Thanh toán linh hoạt chỉ từ 1% - 1.5% mỗi tháng.</li>
-          <li><strong>Quà tặng tân gia:</strong> Tặng ngay gói nội thất hoàn thiện chuẩn Worldhotels trị giá 150 triệu đồng.</li>
+          <li><strong>Quà tặng tân gia:</strong> Tặng ngay gói nội thất hoàn thiện chuẩn Worldhotels trị giá 150 triệu
+            đồng.</li>
         </ul>
-        
+
         <div class="pricing-form-box">
           <h4>Đăng Ký Nhận Bảng Giá Chi Tiết &amp; Căn Đẹp</h4>
           <form class="pform" onsubmit="handlePriceSubmit(event)">
@@ -2774,9 +3468,11 @@
               <input type="text" placeholder="Họ và tên *" required>
               <input type="tel" placeholder="Số điện thoại *" required>
             </div>
-            <button type="submit" class="btn-primary" style="width: 100%; border: none;">Nhận Bảng Giá Ngay →</button>
+            <button type="submit" class="btn-primary" style="width: 100%; border: none;">Nhận Báo Giá Ngay →</button>
           </form>
-          <div id="pform-success" style="display:none; margin-top:1rem; color:var(--gold-light); font-size:14px; font-weight: 500;">✓ Yêu cầu đã được gửi! Gotec Land sẽ phản hồi ngay.</div>
+          <div id="pform-success"
+            style="display:none; margin-top:1rem; color:var(--gold-light); font-size:14px; font-weight: 500;">✓ Yêu cầu
+            đã được gửi! Gotec Land sẽ phản hồi ngay.</div>
         </div>
       </div>
     </div>
@@ -2792,11 +3488,12 @@
           <li>
             <div class="doc-icon">
               <!-- Seal Certificate stamp outline SVG -->
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14 2 14 8 20 8"/>
-                <circle cx="10" cy="15" r="2"/>
-                <path d="M12 17l1 2"/>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <circle cx="10" cy="15" r="2" />
+                <path d="M12 17l1 2" />
               </svg>
             </div>
             <span class="doc-name">Quyết định tên thương mại dự án</span>
@@ -2806,10 +3503,11 @@
           <li>
             <div class="doc-icon">
               <!-- Building skeleton structure outline SVG -->
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="20" width="20" height="2" rx="1"/>
-                <path d="M6 20V4h3v16M13 20V8h3v12M17 20v-6h3v6"/>
-                <path d="M10 8h3v4h-3zM6 4h7v4H6zM10 12h3v4h-3z"/>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="20" width="20" height="2" rx="1" />
+                <path d="M6 20V4h3v16M13 20V8h3v12M17 20v-6h3v6" />
+                <path d="M10 8h3v4h-3zM6 4h7v4H6zM10 12h3v4h-3z" />
               </svg>
             </div>
             <span class="doc-name">Giấy phép xây dựng</span>
@@ -2819,9 +3517,10 @@
           <li>
             <div class="doc-icon">
               <!-- Shield badge with checkmark outline SVG -->
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                <path d="m9 11 2 2 4-4"/>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 11 2 2 4-4" />
               </svg>
             </div>
             <span class="doc-name">Giấy phép đủ điều kiện bán hàng</span>
@@ -2831,9 +3530,10 @@
           <li>
             <div class="doc-icon">
               <!-- Ruler / Set square drawing drafting triangle outline SVG -->
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 20H4L20 4z"/>
-                <path d="M12 17h-2M15 14h-3M17 11v-1M14 8h-1M17 5v-1"/>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 20H4L20 4z" />
+                <path d="M12 17h-2M15 14h-3M17 11v-1M14 8h-1M17 5v-1" />
               </svg>
             </div>
             <span class="doc-name">Quyết định phê duyệt 1:500</span>
@@ -2843,8 +3543,9 @@
           <li>
             <div class="doc-icon">
               <!-- Classic Bank columns vault outline SVG -->
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 21h18M3 10h18M5 10v11M19 10v11M12 10v11M9 10v11M15 10v11M12 2L3 7h18z"/>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18M3 10h18M5 10v11M19 10v11M12 10v11M9 10v11M15 10v11M12 2L3 7h18z" />
               </svg>
             </div>
             <span class="doc-name">Thỏa thuận cấp bảo lãnh ngân hàng</span>
@@ -2854,12 +3555,13 @@
           <li>
             <div class="doc-icon">
               <!-- Document sheet with layout ribbon lines outline SVG -->
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14 2 14 8 20 8"/>
-                <line x1="16" y1="13" x2="8" y2="13"/>
-                <line x1="16" y1="17" x2="8" y2="17"/>
-                <line x1="12" y1="9" x2="8" y2="9"/>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <line x1="12" y1="9" x2="8" y2="9" />
               </svg>
             </div>
             <span class="doc-name">Giấy chứng nhận quyền sử dụng đất</span>
@@ -2872,7 +3574,8 @@
         <p>Nam Ô Discovery được Gotec Land phát triển với đầy đủ hồ sơ pháp lý, đảm bảo quyền lợi tối đa cho khách hàng.
           Dự án có giấy phép xây dựng, giấy phép đủ điều kiện bán hàng và bảo lãnh ngân hàng.</p>
         <p>Mọi thông tin về giá bán, tiến độ thanh toán và hợp đồng mua bán đều được công khai minh bạch.</p>
-        <button class="btn-gold" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận hồ sơ chi tiết</button>
+        <button class="btn-gold" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận
+          hồ sơ chi tiết</button>
       </div>
     </div>
   </section>
@@ -2882,7 +3585,9 @@
     <div class="connection-header">
       <div class="section-label">Liên kết vùng</div>
       <h2>Vị Trí Kim Cương <span>Nơi Giao Thoa Của 4 Vùng Tâm Điểm</span></h2>
-      <p>Nằm kiêu hãnh tại trung tâm trục đại lộ biển đắt giá nhất quận Liên Chiểu – Nguyễn Tất Thành, Nam Ô Discovery mở ra khả năng kết nối không giới hạn, là tâm điểm giao thoa giữa cảnh quan sinh thái, giao thông đô thị và các tiện ích nghỉ dưỡng đẳng cấp quốc tế.</p>
+      <p>Nằm kiêu hãnh tại trung tâm trục đại lộ biển đắt giá nhất quận Liên Chiểu – Nguyễn Tất Thành, Nam Ô Discovery
+        mở ra khả năng kết nối không giới hạn, là tâm điểm giao thoa giữa cảnh quan sinh thái, giao thông đô thị và các
+        tiện ích nghỉ dưỡng đẳng cấp quốc tế.</p>
     </div>
     <div class="connection-grid">
       <div class="connection-map-container">
@@ -2891,23 +3596,28 @@
       <div class="connection-info">
         <div class="connection-item">
           <span class="connection-time">0 Phút</span>
-          <span class="connection-desc">Bãi tắm biển cát trắng Nam Ô (tiếp cận trực tiếp ngay trước thềm nhà) – Vịnh biển Đà Nẵng – Làng du lịch di sản Nam Ô.</span>
+          <span class="connection-desc">Bãi tắm biển cát trắng Nam Ô (tiếp cận trực tiếp ngay trước thềm nhà) – Vịnh
+            biển Đà Nẵng – Làng du lịch di sản Nam Ô.</span>
         </div>
         <div class="connection-item">
           <span class="connection-time">2 Phút</span>
-          <span class="connection-desc">Tổ hợp khu nghỉ dưỡng &amp; Công viên nước Mikazuki Nhật Bản – Cầu Nam Ô – Sông Cu Đê sinh thái.</span>
+          <span class="connection-desc">Tổ hợp khu nghỉ dưỡng &amp; Công viên nước Mikazuki Nhật Bản – Cầu Nam Ô – Sông
+            Cu Đê sinh thái.</span>
         </div>
         <div class="connection-item">
           <span class="connection-time">5 Phút</span>
-          <span class="connection-desc">Cảng quốc tế Liên Chiểu (trọng điểm logistics miền Trung) – Ủy ban nhân dân quận Liên Chiểu – Chợ Nam Ô truyền thống.</span>
+          <span class="connection-desc">Cảng quốc tế Liên Chiểu (trọng điểm logistics miền Trung) – Ủy ban nhân dân quận
+            Liên Chiểu – Chợ Nam Ô truyền thống.</span>
         </div>
         <div class="connection-item">
           <span class="connection-time">10 Phút</span>
-          <span class="connection-desc">Siêu dự án nghỉ dưỡng Vinpearl Làng Vân – Danh thắng Đèo Hải Vân hùng vĩ – Bến xe trung tâm thành phố Đà Nẵng.</span>
+          <span class="connection-desc">Siêu dự án nghỉ dưỡng Vinpearl Làng Vân – Danh thắng Đèo Hải Vân hùng vĩ – Bến
+            xe trung tâm thành phố Đà Nẵng.</span>
         </div>
         <div class="connection-item">
           <span class="connection-time">15 Phút</span>
-          <span class="connection-desc">Sân bay quốc tế Đà Nẵng – Ga Đà Nẵng – Cầu Rồng, Cầu Sông Hàn – Trung tâm hành chính &amp; mua sắm TP. Đà Nẵng.</span>
+          <span class="connection-desc">Sân bay quốc tế Đà Nẵng – Ga Đà Nẵng – Cầu Rồng, Cầu Sông Hàn – Trung tâm hành
+            chính &amp; mua sắm TP. Đà Nẵng.</span>
         </div>
       </div>
     </div>
@@ -2941,42 +3651,119 @@
 
   <!-- CONTACT -->
   <section class="contact fade-up" id="contact">
-    <div class="section-label">Liên hệ</div>
-    <h2 class="section-title">Đăng ký nhận tư vấn miễn phí</h2>
-    <p class="contact-sub">Để lại thông tin, chuyên viên của Gotec Land sẽ liên hệ bạn trong vòng 24 giờ.</p>
-    <form class="contact-form" onsubmit="handleSubmit(event)">
-      <input type="text" placeholder="Họ và tên *" required>
-      <input type="tel" placeholder="Số điện thoại *" required>
-      <input type="email" placeholder="Email" style="grid-column:span 2">
-      <textarea placeholder="Nội dung quan tâm (loại căn, ngân sách...)"></textarea>
-      <button type="submit" class="btn-gold">Gửi yêu cầu tư vấn →</button>
-    </form>
-    <div id="form-success" style="display:none; margin-top:1.5rem; color:var(--gold-light); font-size:15px;">✓ Cảm ơn
-      bạn! Chúng tôi sẽ liên hệ sớm nhất.</div>
+    <div class="contact-ambient-glow"></div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="section-label">Liên hệ</div>
+        <h2 class="section-title">Đăng ký nhận tư vấn miễn phí</h2>
+        <p class="contact-sub">Để lại thông tin, chuyên viên của Gotec Land sẽ liên hệ bạn trong vòng 24 giờ.</p>
+        
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <!-- Phone Icon -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.56 11.56 0 0 1 8.57 4c0-.55-.45-1-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.58c0-.56-.45-1.04-1-1.04z" />
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <span class="detail-label">Hotline 24/7</span>
+              <a href="tel:1900638074" class="detail-val">1900 638 074</a>
+            </div>
+          </div>
+          
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <!-- Mail Icon -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <span class="detail-label">Email</span>
+              <a href="mailto:info@gotecland.vn" class="detail-val">info@gotecland.vn</a>
+            </div>
+          </div>
+          
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <!-- Address Icon -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <span class="detail-label">Văn phòng</span>
+              <span class="detail-val">84 Huỳnh Văn Bánh, P. Cầu Kiệu, Q. Phú Nhuận, TP. HCM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-card">
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="fullname" placeholder=" " required>
+              <label for="fullname">Họ và tên *</label>
+              <div class="input-focus-line"></div>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" placeholder=" " required>
+              <label for="phone">Số điện thoại *</label>
+              <div class="input-focus-line"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder=" ">
+            <label for="email">Email</label>
+            <div class="input-focus-line"></div>
+          </div>
+          <div class="form-group">
+            <textarea id="message" placeholder=" "></textarea>
+            <label for="message">Nội dung quan tâm (loại căn, ngân sách...)</label>
+            <div class="input-focus-line"></div>
+          </div>
+          <button type="submit" class="btn-gold">
+            <span>Gửi yêu cầu tư vấn</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+            </svg>
+          </button>
+        </form>
+        <div id="form-success" class="form-success-card">
+          <div class="success-icon-wrap">
+            <svg class="success-checkmark" viewBox="0 0 52 52">
+              <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+              <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+          </div>
+          <h3>Đăng ký thành công!</h3>
+          <p>Cảm ơn bạn đã quan tâm dự án Nam Ô Discovery. Chúng tôi sẽ liên hệ trong thời gian sớm nhất.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div>
-      <div class="footer-brand">
-        <img src="../Image/logo-Gotec-Land-white-768x300.webp" alt="Gotec Land">
-      </div>
-      <div class="footer-info" style="margin-top:0.5rem;">84 Huỳnh Văn Bánh, Phường Cầu Kiệu, TP. Hồ Chí Minh<br>Liên
-        hệ: 1900 638 074 · info@gotecland.vn</div>
+    <div class="footer-container">
+      <div class="footer-copy">© 2026 Go Media Vietnam · All Rights Reserved</div>
     </div>
-    <div class="footer-socials">
-      <a href="https://www.facebook.com/profile.php?id=61585555372401" target="_blank">Facebook</a>
-      <a href="https://zalo.me/1913540749972931403" target="_blank">Zalo</a>
-      <a href="mailto:info@gotecland.vn">Email</a>
-    </div>
-    <div class="footer-copy">© 2025 GoZone · All Rights Reserved</div>
   </footer>
 
   <script>
     function handleSubmit(e) {
       e.preventDefault();
-      document.querySelector('.contact-form').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
+      const form = document.querySelector('.contact-form');
+      const success = document.getElementById('form-success');
+      
+      form.style.opacity = '0';
+      form.style.transform = 'scale(0.95)';
+      
+      setTimeout(() => {
+        form.style.display = 'none';
+        success.style.display = 'flex';
+      }, 300);
     }
 
     // PRESENTATION GALLERY DATA
@@ -2989,6 +3776,14 @@
         {
           title: "Sơ đồ chi tiết khối đế trệt",
           src: "../Image/NAMODISCOVERY_TT2_rz.webp"
+        },
+        {
+          title: "Sơ đồ kết nối giao thông tiện lợi",
+          src: "../Image/so-do-ket-noi-giao-thong-tien-loi-cua-du-an-nam-o-discovery.jpg"
+        },
+        {
+          title: "Vị trí dự án Nam Ô Discovery",
+          src: "../Image/vi-tri-nam-o-discovery-da-nang.jpg"
         },
         {
           title: "Bản đồ vị trí & liên kết",
@@ -3187,10 +3982,10 @@
     function switchShowroom(btn, type) {
       document.querySelectorAll('.showroom-tab').forEach(t => t.classList.remove('active'));
       btn.classList.add('active');
-      
+
       const data = showroomData[type];
       const content = document.getElementById('showroomContent');
-      
+
       content.style.opacity = 0;
       setTimeout(() => {
         content.innerHTML = `
@@ -3235,7 +4030,7 @@
         const isDecimal = counter.getAttribute('data-format') === 'dot';
         const duration = 2000;
         const startTime = performance.now();
-        
+
         function updateCount(currentTime) {
           const elapsedTime = currentTime - startTime;
           if (elapsedTime >= duration) {
@@ -3246,24 +4041,24 @@
             }
             return;
           }
-          
+
           const progress = elapsedTime / duration;
           const easeProgress = progress * (2 - progress);
           const currentValue = target * easeProgress;
-          
+
           if (isDecimal) {
             counter.textContent = formatWithDot(Math.round(currentValue));
           } else {
             counter.textContent = Math.round(currentValue);
           }
-          
+
           requestAnimationFrame(updateCount);
         }
-        
+
         function formatWithDot(num) {
           return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
         }
-        
+
         requestAnimationFrame(updateCount);
       });
     }
@@ -3273,7 +4068,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          
+
           if (entry.target.classList.contains('stats-bar') && !statsAnimated) {
             statsAnimated = true;
             animateCounters();
@@ -3297,7 +4092,7 @@
     function switchFloor(index) {
       if (index < 0 || index >= floorPlans.length) return;
       currentFloorIndex = index;
-      
+
       const dots = document.querySelectorAll('.floor-dot');
       dots.forEach((dot, idx) => {
         if (idx === index) {
@@ -3306,7 +4101,7 @@
           dot.classList.remove('active');
         }
       });
-      
+
       const img = document.getElementById('floorPlanImg');
       img.style.opacity = 0.2;
       setTimeout(() => {
@@ -3339,7 +4134,7 @@
     // Swipe and Drag gesture handling
     document.addEventListener('DOMContentLoaded', () => {
       initGallery(); // Initialize design plan interactive gallery center
-      
+
       const viewer = document.querySelector('.floor-viewer');
       const img = document.getElementById('floorPlanImg');
       if (!viewer || !img) return;
@@ -3396,29 +4191,50 @@
         }
       }
     });
+
+
   </script>
 
   <!-- FLOATING ACTION BUTTONS -->
   <div class="floating-buttons">
-    <a href="https://www.facebook.com/profile.php?id=61585555372401" target="_blank" class="float-btn float-fb" data-tooltip="Facebook Messenger">
+    <a href="https://www.facebook.com/profile.php?id=61585555372401" target="_blank" class="float-btn float-fb"
+      data-tooltip="Facebook Messenger">
       <div class="float-btn-ring"></div>
       <div class="float-btn-circle">
-        <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <circle class="fb-bg" cx="12" cy="12" r="12" fill="#ffffff" />
+          <path class="fb-txt" fill="#1877F2" transform="translate(6.0, 5.0) scale(0.65)"
+            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+        </svg>
       </div>
     </a>
-    <a href="https://zalo.me/1913540749972931403" target="_blank" class="float-btn float-zalo" data-tooltip="Liên hệ Zalo">
+    <a href="https://zalo.me/1913540749972931403" target="_blank" class="float-btn float-zalo"
+      data-tooltip="Liên hệ Zalo">
       <div class="float-btn-ring"></div>
       <div class="float-btn-circle">
-        <svg viewBox="0 0 52 52">
-          <path d="M26 12c-7.73 0-14 5.37-14 12 0 3.73 2.01 7.03 5.15 9.07l-.93 3.32c-.15.54.41.98.86.68l4.08-2.67c1.52.41 3.16.6 4.84.6 7.73 0 14-5.37 14-12s-6.27-14-14-14z" fill="#ffffff" />
-          <text x="26" y="28.5" font-family="'Outfit', sans-serif" font-weight="900" font-size="10" fill="#0068ff" text-anchor="middle">Zalo</text>
+        <svg viewBox="0 0 50 50">
+          <path class="zalo-bg" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff"
+            d="M7.779 43.5892C10.1019 43.846 13.0061 43.1836 15.0682 42.1825C24.0225 47.1318 38.0197 46.8954 46.4923 41.4732C46.8209 40.9803 47.1279 40.4677 47.4128 39.9363C49.1062 36.7779 50.0004 33.22 50.0004 27.1316V22.7175C50.0004 16.629 49.1062 13.0711 47.4128 9.91273C45.7385 6.75436 43.2461 4.28093 40.0877 2.58758C36.9293 0.894239 33.3714 0 27.283 0H22.8499C17.6644 0 14.2982 0.652754 11.4699 1.89893C11.3153 2.03737 11.1636 2.17818 11.0151 2.32135C2.71734 10.3203 2.08658 27.6593 9.12279 37.0782C9.13064 37.0921 9.13933 37.1061 9.14889 37.1203C10.2334 38.7185 9.18694 41.5154 7.55068 43.1516C7.28431 43.399 7.37944 43.5512 7.779 43.5892Z" />
+          <path class="zalo-txt" fill="#0068FF"
+            d="M20.5632 17H10.8382V19.0853H17.5869L10.9329 27.3317C10.7244 27.635 10.5728 27.9194 10.5728 28.5639V29.0947H19.748C20.203 29.0947 20.5822 28.7156 20.5822 28.2606V27.1421H13.4922L19.748 19.2938C19.8428 19.1801 20.0134 18.9716 20.0893 18.8768L20.1272 18.8199C20.4874 18.2891 20.5632 17.8341 20.5632 17.2844V17Z" />
+          <path class="zalo-txt" fill="#0068FF"
+            d="M32.9416 29.0947H34.3255V17H32.2402V28.3933C32.2402 28.7725 32.5435 29.0947 32.9416 29.0947Z" />
+          <path class="zalo-txt" fill="#0068FF"
+            d="M25.814 19.6924C23.1979 19.6924 21.0747 21.8156 21.0747 24.4317C21.0747 27.0478 23.1979 29.171 25.814 29.171C28.4301 29.171 30.5533 27.0478 30.5533 24.4317C30.5723 21.8156 28.4491 19.6924 25.814 19.6924ZM25.814 27.2184C24.2785 27.2184 23.0273 25.9669 23.0273 24.4317C23.0273 22.8962 24.2785 21.645 25.814 21.645C27.3495 21.645 28.6007 22.8962 28.6007 24.4317C28.6007 25.9672 27.3685 27.2184 25.814 27.2184Z" />
+          <path class="zalo-txt" fill="#0068FF"
+            d="M40.4867 19.6162C37.8516 19.6162 35.7095 21.7584 35.7095 24.3934C35.7095 27.0285 37.8516 29.1707 40.4867 29.1707C43.1217 29.1707 45.2639 27.0285 45.2639 24.3934C45.2639 21.7584 43.1217 19.6162 40.4867 19.6162ZM40.4867 27.2181C38.9322 27.2181 37.681 25.9669 37.681 24.4124C37.681 22.8579 38.9322 21.6067 40.4867 21.6067C42.0412 21.6067 43.2924 22.8579 43.2924 24.4124C43.2924 25.9669 42.0412 27.2181 40.4867 27.2181Z" />
+          <path class="zalo-txt" fill="#0068FF"
+            d="M29.4562 29.0944H30.5747V19.957H28.6221V28.2793C28.6221 28.7153 29.0012 29.0944 29.4562 29.0944Z" />
         </svg>
       </div>
     </a>
     <a href="tel:1900638074" class="float-btn float-phone" data-tooltip="Hotline: 1900 638 074">
       <div class="float-btn-ring"></div>
       <div class="float-btn-circle">
-        <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.56 11.56 0 0 1 8.57 4c0-.55-.45-1-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.58c0-.56-.45-1.04-1-1.04z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.56 11.56 0 0 1 8.57 4c0-.55-.45-1-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.58c0-.56-.45-1.04-1-1.04z" />
+        </svg>
       </div>
     </a>
   </div>
