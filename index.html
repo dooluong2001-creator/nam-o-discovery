@@ -2955,9 +2955,23 @@
       font-size: 14px;
       line-height: 1.6;
       color: var(--text-muted);
-      display: flex;
-      align-items: flex-start;
+      display: grid;
+      grid-template-columns: auto 245px 1fr;
       gap: 0.8rem;
+      align-items: start;
+    }
+
+    @media (max-width: 767px) {
+      .pricing-policy-list li {
+        display: block;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      .pricing-policy-list li::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
     }
 
     .pricing-policy-list li::before {
@@ -3485,13 +3499,11 @@
         <h3 class="pricing-title">Chính Sách Ưu Đãi Đặc Biệt Đợt 1</h3>
 
         <ul class="pricing-policy-list">
-          <li><strong>Booking ưu tiên:</strong> Chỉ 50 triệu/căn (hoàn tiền 100% nếu không mua).</li>
-          <li><strong>Chiết khấu thanh toán sớm:</strong> Nhận chiết khấu lên đến 12% giá trị căn hộ.</li>
-          <li><strong>Hỗ trợ tài chính cực tốt:</strong> Hỗ trợ vay ngân hàng 70%, ân hạn nợ gốc và lãi suất 0% trong 18
-            tháng.</li>
-          <li><strong>Tiến độ thanh toán thư thả:</strong> Thanh toán linh hoạt chỉ từ 1% - 1.5% mỗi tháng.</li>
-          <li><strong>Quà tặng tân gia:</strong> Tặng ngay gói nội thất hoàn thiện chuẩn Worldhotels trị giá 150 triệu
-            đồng.</li>
+          <li><strong>Booking ưu tiên:</strong> <span>Chỉ 50 triệu/căn (hoàn tiền 100% nếu không mua).</span></li>
+          <li><strong>Chiết khấu thanh toán sớm:</strong> <span>Nhận chiết khấu lên đến 12% giá trị căn hộ.</span></li>
+          <li><strong>Hỗ trợ tài chính cực tốt:</strong> <span>Hỗ trợ vay ngân hàng 70%, ân hạn nợ gốc và lãi suất 0% trong 18 tháng.</span></li>
+          <li><strong>Tiến độ thanh toán thư thả:</strong> <span>Thanh toán linh hoạt chỉ từ 1% - 1.5% mỗi tháng.</span></li>
+          <li><strong>Quà tặng tân gia:</strong> <span>Tặng ngay gói nội thất hoàn thiện chuẩn Worldhotels trị giá 150 triệu đồng.</span></li>
         </ul>
 
         <div class="pricing-form-box">
