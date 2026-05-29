@@ -1450,16 +1450,16 @@
       font-family: 'Be Vietnam Pro', sans-serif;
     }
 
-    .form-group textarea ~ label {
+    .form-group textarea~label {
       top: 28px;
       transform: none;
     }
 
     /* When focused or not placeholder shown (has text) */
-    .form-group input:focus ~ label,
-    .form-group input:not(:placeholder-shown) ~ label,
-    .form-group textarea:focus ~ label,
-    .form-group textarea:not(:placeholder-shown) ~ label {
+    .form-group input:focus~label,
+    .form-group input:not(:placeholder-shown)~label,
+    .form-group textarea:focus~label,
+    .form-group textarea:not(:placeholder-shown)~label {
       top: 10px;
       font-size: 11px;
       color: var(--gold-light);
@@ -1485,8 +1485,8 @@
       transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
-    .form-group input:focus ~ .input-focus-line,
-    .form-group textarea:focus ~ .input-focus-line {
+    .form-group input:focus~.input-focus-line,
+    .form-group textarea:focus~.input-focus-line {
       transform: scaleX(1);
     }
 
@@ -1635,9 +1635,12 @@
     }
 
     @keyframes scaleCheckmark {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: none;
       }
+
       50% {
         transform: scale3d(1.1, 1.1, 1);
       }
@@ -1648,6 +1651,7 @@
         transform: scale(0.9);
         opacity: 0;
       }
+
       to {
         transform: scale(1);
         opacity: 1;
@@ -1659,31 +1663,39 @@
       .contact {
         padding: 6rem 2rem;
       }
+
       .contact-container {
         grid-template-columns: 1fr;
         gap: 3.5rem;
         text-align: center;
       }
+
       .contact-info .section-label {
         justify-content: center;
       }
+
       .contact-info .section-title {
         font-size: 32px;
       }
+
       .contact-info .contact-sub {
         margin-bottom: 2.5rem;
       }
+
       .contact-details {
         align-items: center;
       }
+
       .contact-detail-item {
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
       }
+
       .contact-card {
         padding: 2.5rem 2rem;
       }
+
       .form-row {
         grid-template-columns: 1fr;
         gap: 0;
@@ -3155,7 +3167,8 @@
       <li><a href="#location">Vị trí</a></li>
       <li><a href="#contact">Liên hệ</a></li>
     </ul>
-    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Đăng ký tư vấn</button>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Đăng ký tư
+      vấn</button>
   </nav>
 
   <!-- HERO -->
@@ -3166,11 +3179,13 @@
     <div class="hero-content">
       <div class="hero-label">NHÀ Ở · ĐÀ NẴNG</div>
       <h1 class="hero-title">Nam Ô<br><em>Discovery</em></h1>
-      <p class="hero-sub">Ôm trọn vịnh biển Đà Nẵng xanh bất tận, dãy núi hùng vĩ và dòng Cu Đê thơ mộng.<br>Một bước chân chạm đến đại dương.</p>
+      <p class="hero-sub">Ôm trọn vịnh biển Đà Nẵng xanh bất tận, dãy núi hùng vĩ và dòng Cu Đê thơ mộng.<br>Một bước
+        chân chạm đến đại dương.</p>
       <div class="hero-actions">
         <button class="btn-primary"
           onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận báo giá</button>
-        <button class="btn-outline" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">Xem thư viện</button>
+        <button class="btn-outline" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">Xem
+          thư viện</button>
       </div>
     </div>
     <div class="hero-scroll">
@@ -3203,14 +3218,15 @@
   <section class="about fade-up" id="about">
     <div class="about-text">
       <div class="section-label">Giới thiệu dự án</div>
-      <h2 class="section-title">Nơi thiên nhiên gặp gỡ đẳng cấp sống</h2>
+      <h2 class="section-title">NƠI THIÊN NHIÊN GẶP GỠ ĐẲNG CẤP SỐNG</h2>
       <p>Nam Ô Discovery ôm trọn vào lòng những gì đắt giá nhất của khu vực: từ vịnh biển Đà Nẵng xanh bất tận đến dãy
         núi hùng vĩ, từ dòng Cu Đê thơ mộng đến những khu phố du lịch di sản.</p>
       <p>Một bước chân chạm đến đại dương, một nhịp kết nối phố thị — tận hưởng trọn vẹn sự bình yên lẫn sôi động trong
         từng khoảnh khắc. Đây không chỉ là nơi để ở, mà là nơi để sống trọn vẹn.</p>
       <p style="margin-bottom: 2rem;">Chủ đầu tư: <strong>Gotec Land</strong> — thương hiệu bất động sản uy tín với
         nhiều dự án thành công trên toàn quốc.</p>
-      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Tìm hiểu thêm</button>
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Tìm
+        hiểu thêm</button>
     </div>
     <div class="about-images">
       <img class="about-img tall"
@@ -3229,7 +3245,7 @@
   <section class="amenities fade-up" id="amenities">
     <div class="amenities-header">
       <div class="section-label">Tiện ích nội khu</div>
-      <h2 class="section-title">Cuộc sống tiện nghi toàn diện</h2>
+      <h2 class="section-title">CUỘC SỐNG TIỆN NGHI TOÀN DIỆN</h2>
       <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7; font-weight:300;">Hệ thống tiện ích đẳng
         cấp được thiết kế để phục vụ mọi nhu cầu của cư dân, từ thư giãn đến vận động và kết nối cộng đồng.</p>
     </div>
@@ -3325,7 +3341,7 @@
   <section class="site-plan-section fade-up" id="gallery">
     <div class="connection-header">
       <div class="section-label">Trung tâm trải nghiệm thực tế</div>
-      <h2>Mặt Bằng Thiết Kế &amp; <span>Phối Cảnh 3D Chi Tiết</span></h2>
+      <h2>Mặt Bằng Thiết Kế; <span>& Phối Cảnh 3D Chi Tiết</span></h2>
       <p>Khám phá bản đồ chi tiết, sơ đồ thiết kế mặt bằng tổng thể 2 tòa tháp cùng những góc phối cảnh 3D tiện ích và
         kiến trúc tinh xảo của Nam Ô Discovery.</p>
     </div>
@@ -3429,7 +3445,8 @@
               <li><strong>Bàn giao:</strong> Hoàn thiện nội thất 5 sao (Tháp A)</li>
             </ul>
             <button class="btn-primary" style="margin-top: 1.5rem;"
-              onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận Báo Giá Căn 1PN</button>
+              onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận Báo Giá Căn
+              1PN</button>
           </div>
         </div>
       </div>
@@ -3577,7 +3594,8 @@
         <p>Nam Ô Discovery được Gotec Land phát triển với đầy đủ hồ sơ pháp lý, đảm bảo quyền lợi tối đa cho khách hàng.
           Dự án có giấy phép xây dựng, giấy phép đủ điều kiện bán hàng và bảo lãnh ngân hàng.</p>
         <p>Mọi thông tin về giá bán, tiến độ thanh toán và hợp đồng mua bán đều được công khai minh bạch.</p>
-        <button class="btn-gold" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận hồ sơ chi tiết</button>
+        <button class="btn-gold" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nhận
+          hồ sơ chi tiết</button>
       </div>
     </div>
   </section>
@@ -3659,13 +3677,14 @@
         <div class="section-label">Liên hệ</div>
         <h2 class="section-title">Đăng ký nhận tư vấn miễn phí</h2>
         <p class="contact-sub">Để lại thông tin, chuyên viên của Gotec Land sẽ liên hệ bạn trong vòng 24 giờ.</p>
-        
+
         <div class="contact-details">
           <div class="contact-detail-item">
             <div class="contact-detail-icon">
               <!-- Phone Icon -->
               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.56 11.56 0 0 1 8.57 4c0-.55-.45-1-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.58c0-.56-.45-1.04-1-1.04z" />
+                <path
+                  d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.56 11.56 0 0 1 8.57 4c0-.55-.45-1-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.58c0-.56-.45-1.04-1-1.04z" />
               </svg>
             </div>
             <div class="contact-detail-text">
@@ -3673,12 +3692,13 @@
               <a href="tel:1900638074" class="detail-val">1900 638 074</a>
             </div>
           </div>
-          
+
           <div class="contact-detail-item">
             <div class="contact-detail-icon">
               <!-- Mail Icon -->
               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
               </svg>
             </div>
             <div class="contact-detail-text">
@@ -3686,12 +3706,13 @@
               <a href="mailto:info@gotecland.vn" class="detail-val">info@gotecland.vn</a>
             </div>
           </div>
-          
+
           <div class="contact-detail-item">
             <div class="contact-detail-icon">
               <!-- Address Icon -->
               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
               </svg>
             </div>
             <div class="contact-detail-text">
@@ -3701,7 +3722,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="contact-card">
         <form class="contact-form" onsubmit="handleSubmit(event)">
           <div class="form-row">
@@ -3758,10 +3779,10 @@
       e.preventDefault();
       const form = document.querySelector('.contact-form');
       const success = document.getElementById('form-success');
-      
+
       form.style.opacity = '0';
       form.style.transform = 'scale(0.95)';
-      
+
       setTimeout(() => {
         form.style.display = 'none';
         success.style.display = 'flex';
