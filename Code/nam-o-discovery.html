@@ -77,18 +77,18 @@
 
     .nav-links {
       display: flex;
-      gap: 1.25rem;
+      gap: 2rem;
       list-style: none;
     }
 
     .nav-links a {
       font-size: 12px;
       font-weight: 600;
-      letter-spacing: -0.3px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       color: #fff;
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color 0.2s, letter-spacing 0.2s;
     }
 
     .nav-links a:hover {
@@ -101,7 +101,7 @@
       background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, #A88644 100%);
       color: #fff;
       font-size: 12px;
-      letter-spacing: -0.3px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       padding: 12px 28px;
       border: 1px solid rgba(255, 255, 255, 0.15);
@@ -133,7 +133,7 @@
       box-shadow: 0 8px 22px rgba(197, 165, 90, 0.35);
       border-color: rgba(255, 255, 255, 0.3);
       background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 30%, #b2934c 100%);
-      letter-spacing: -0.1px;
+      letter-spacing: 2px;
     }
 
     .nav-cta:hover::before {
@@ -192,7 +192,7 @@
 
     .hero-label {
       font-size: 11px;
-      letter-spacing: 1.5px;
+      letter-spacing: 4px;
       text-transform: uppercase;
       color: var(--gold-light);
       margin-bottom: 1.2rem;
@@ -254,14 +254,14 @@
       background: linear-gradient(135deg, var(--crimson-light) 0%, var(--crimson) 50%, var(--crimson-dark) 100%);
       color: #fff;
       font-size: 12px;
-      letter-spacing: -0.3px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       padding: 16px 36px;
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 4px;
       cursor: pointer;
       font-family: 'Be Vietnam Pro', sans-serif;
-      font-weight: 600;
+      font-weight: 500;
       box-shadow: 0 4px 15px rgba(123, 18, 37, 0.15);
       transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     }
@@ -275,7 +275,7 @@
       height: 100%;
       background: linear-gradient(90deg,
           rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 0.25) 50%,
+          rgba(255, 255, 255, 0.3) 50%,
           rgba(255, 255, 255, 0) 100%);
       transform: skewX(-25deg);
       transition: none;
@@ -286,7 +286,7 @@
       box-shadow: 0 8px 22px rgba(123, 18, 37, 0.3);
       border-color: rgba(255, 255, 255, 0.2);
       background: linear-gradient(135deg, var(--crimson-light) 0%, var(--crimson) 30%, #5e0d1b 100%);
-      letter-spacing: -0.1px;
+      letter-spacing: 2px;
     }
 
     .btn-primary:hover::before {
@@ -301,13 +301,14 @@
       border: 1px solid rgba(255, 255, 255, 0.3);
       color: rgba(255, 255, 255, 0.85);
       font-size: 12px;
-      letter-spacing: -0.3px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       padding: 16px 36px;
       border-radius: 4px;
       cursor: pointer;
       font-family: 'Be Vietnam Pro', sans-serif;
-      font-weight: 600;
+      font-weight: 400;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
@@ -332,7 +333,7 @@
       color: var(--gold-light);
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(197, 165, 90, 0.15);
-      letter-spacing: -0.1px;
+      letter-spacing: 2px;
     }
 
     .btn-outline:hover::before {
@@ -346,7 +347,7 @@
       background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, #A88644 100%);
       color: #fff;
       font-size: 12px;
-      letter-spacing: -0.3px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       padding: 16px 36px;
       border: 1px solid rgba(255, 255, 255, 0.15);
@@ -378,7 +379,7 @@
       box-shadow: 0 8px 22px rgba(197, 165, 90, 0.35);
       border-color: rgba(255, 255, 255, 0.3);
       background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 30%, #b2934c 100%);
-      letter-spacing: -0.1px;
+      letter-spacing: 2px;
     }
 
     .btn-gold:hover::before {
@@ -412,7 +413,7 @@
 
     .hero-scroll span {
       font-size: 10px;
-      letter-spacing: 1px;
+      letter-spacing: 3px;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.5);
       writing-mode: vertical-rl;
@@ -513,7 +514,7 @@
 
     .stat-label {
       font-size: 11px;
-      letter-spacing: 0.8px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.6);
       margin-bottom: 0.8rem;
@@ -530,7 +531,7 @@
       font-weight: 600;
       color: var(--gold-light);
       line-height: 1;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.08em;
       transition: transform 0.3s ease, color 0.3s ease;
       display: inline-block;
     }
@@ -548,7 +549,7 @@
 
     .section-label {
       font-size: 10px;
-      letter-spacing: 1.5px;
+      letter-spacing: 4px;
       text-transform: uppercase;
       color: var(--crimson);
       margin-bottom: 0.8rem;
@@ -571,7 +572,6 @@
       line-height: 1.15;
       color: var(--charcoal);
       margin-bottom: 1.5rem;
-      text-transform: uppercase;
     }
 
     /* ABOUT */
@@ -751,7 +751,7 @@
       font-weight: 600;
       color: var(--charcoal);
       margin-bottom: 0.8rem;
-      letter-spacing: 0;
+      letter-spacing: 0.5px;
     }
 
     .amenity-desc {
@@ -1027,7 +1027,7 @@
 
     .doc-link {
       font-size: 11px;
-      letter-spacing: 0.5px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--crimson);
       font-weight: 600;
@@ -1092,7 +1092,7 @@
       font-weight: 400;
       margin-bottom: 1.2rem;
       color: var(--gold-light);
-      letter-spacing: 0;
+      letter-spacing: 0.5px;
     }
 
     .legal-highlight p {
@@ -1365,7 +1365,7 @@
     .detail-label {
       font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: 2px;
       color: rgba(255, 255, 255, 0.45);
       font-weight: 500;
     }
@@ -1501,7 +1501,7 @@
       border: none;
       color: #0f0709;
       font-size: 13px;
-      letter-spacing: -0.3px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       padding: 18px;
       border-radius: 8px;
@@ -1709,7 +1709,7 @@
     .footer-copy {
       font-size: 12px;
       color: rgba(255, 255, 255, 0.35);
-      letter-spacing: 0.3px;
+      letter-spacing: 1.5px;
       font-weight: 300;
       text-align: center;
     }
@@ -1744,7 +1744,7 @@
       color: var(--charcoal);
       margin-bottom: 1.5rem;
       text-transform: uppercase;
-      letter-spacing: 0.3px;
+      letter-spacing: 1px;
     }
 
     .connection-header h2 span {
@@ -2222,7 +2222,7 @@
       font-size: 13.5px;
       font-weight: 600;
       cursor: pointer;
-      letter-spacing: 0.2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
       font-family: 'Be Vietnam Pro', sans-serif;
@@ -2693,7 +2693,7 @@
       font-size: 13px;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.2px;
+      letter-spacing: 1.5px;
       text-align: left;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -2766,7 +2766,7 @@
       font-weight: 600;
       color: var(--crimson);
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: 2px;
       margin-bottom: 0.8rem;
     }
 
@@ -2866,7 +2866,7 @@
       font-weight: 300;
       color: #fff;
       line-height: 1.2;
-      letter-spacing: 0.3px;
+      letter-spacing: 1px;
     }
 
     .pricing-visual-overlay h3 em {
@@ -2895,7 +2895,7 @@
 
     .badge-label {
       font-size: 11px;
-      letter-spacing: 0.8px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.7);
       font-weight: 500;
@@ -2956,7 +2956,7 @@
       color: var(--charcoal);
       margin-bottom: 1.2rem;
       text-transform: uppercase;
-      letter-spacing: 0.2px;
+      letter-spacing: 1.5px;
     }
 
     .pform {
